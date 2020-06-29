@@ -2,6 +2,7 @@ import React from 'react';
 import Container from "./../container/container";
 
 import Logo from "./../../../static/optego-logo-color.png";
+import IconMenu from "./../../../static/icon-menu.svg";
 
 const Header = () => {
   return (
@@ -10,14 +11,9 @@ const Header = () => {
         <a href="" className="header-logo">
           <img src={Logo} alt="Optego Logo"/>
         </a>
-        <nav>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </nav>
+        <button className="header-menu">
+          <img src={IconMenu} alt=""/>
+        </button>
       </Container>
     </header>
   );

@@ -7,6 +7,7 @@ import Title from './../components/homepage/title';
 import Hero from './../components/homepage/hero/hero';
 import AboutUs from './../components/homepage/about-us/about-us';
 import OurServices from './../components/homepage/our-services/our-services';
+import OurClients from './../components/homepage/our-clients/our-clients';
 
 import "./../styles/core.scss";
 
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <AboutUs />
         <OurServices />
+        <OurClients />
       </main>
       <Footer />
     </Fragment>

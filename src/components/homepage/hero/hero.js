@@ -34,8 +34,8 @@ const Hero = () => {
         <h1 className="hero-title">
           welcome to digital
           marketing services
-          based on data
-          knowledge and
+          <strong> based on data
+          knowledge</strong> and
           practical experience
         </h1>
         <div className="hero-image-wrapper">

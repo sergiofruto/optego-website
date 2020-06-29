@@ -38,11 +38,20 @@ main {
 
 //common
 @import "./../components/shared/header/header.scss";
+@import "./../components/shared/footer/footer.scss";
 @import "./../components/shared/container/container.scss";
 @import "./../components/shared/section-title/section-title.scss";
+@import "./../components/shared/page-title/page-title.scss";
+@import "./../components/shared/page-subtitle/page-subtitle.scss";
 @import "./../components/shared/section-subtitle/section-subtitle.scss";
 @import "./../components/shared/aside-mark/aside-mark.scss";
+@import "./../components/shared/button/button.scss";
+
 //homepage
 @import "./../components/homepage/hero/hero.scss";
 @import "./../components/homepage/about-us/about-us.scss";
 @import "./../components/homepage/our-services/our-services.scss";
+@import "./../components/homepage/our-clients/our-clients.scss";
+
+//our work
+@import "./our-work";

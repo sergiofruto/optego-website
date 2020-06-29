@@ -22,14 +22,21 @@
 
 .inner-hero {
   display: flex;
+  align-items: center;
 
   aside {
     flex: 0 0 168px;
     padding-left: var(--page-guttter);
+    margin-top: 116px;
+    align-self: baseline;
   }
 
   .hero-title {
     flex: 0 0 49%;
+    strong {
+      color:  $primary-yellow;
+      font-weight: 800;
+    }
   }
 
   .hero-image-wrapper {

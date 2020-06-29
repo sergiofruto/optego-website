@@ -1,0 +1,17 @@
+.main-btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 60px;
+  border-radius: 42px;
+  margin: 0 auto;
+  text-align: center;
+  flex: 0 1 auto;
+  height: 80px;
+  background: $primary-red;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  text-align: left;
+  color: #fff;
+}

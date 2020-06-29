@@ -1,0 +1,47 @@
+.footer {
+  padding: 90px 0 100px;
+  margin-top: 72px;
+  background-color: $primary-black;
+  padding-left: 168px;
+
+  .inner-footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding-top: 72px;
+  }
+
+  .footer-logo img {
+    width: 320px;
+  }
+
+  .offices-list {
+    a {
+      font-weight: normal;
+      font-size: 27.56px;
+      line-height: 37.75px;
+      text-align: left;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .offices-list > li {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .site-links ul li { 
+    font-family: Raleway-SemiBold;
+    font-weight: normal;
+    font-size: 31px;
+    line-height: 49px;
+    text-align: left;
+    color: #fff;
+  }
+
+  .hero-social-links a {
+    color: white;
+  }
+}

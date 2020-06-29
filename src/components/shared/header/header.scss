@@ -1,8 +1,22 @@
 .header {
   padding: 50px 0;
+  padding-left: 168px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
 
   .header-logo {
     display: flex;
     width: 224px;
+  }
+
+  .header-menu {
+    width: 36px;
+    height: 32px;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
   }
 }
