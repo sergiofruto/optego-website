@@ -1,0 +1,79 @@
+.homepage-about-us {
+  padding-top: 60px;
+
+  @include bp(desktop) {
+    padding-top: 120px;
+  }
+
+  @include bp(desktop-lg) {
+    padding-top: 230px;
+  }
+
+  .inner-wrapper {
+    display: flex;
+    flex-direction: column;
+  
+    @include bp(desktop) {
+      flex-direction: row;
+    }
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .what-we-do-cards {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
+  .what-we-do-card {
+    max-width: 350px;
+
+    @include bp(desktop-lg) {
+      max-width: 388px;
+    }
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      padding-top: 112px;
+    }
+
+    .what-we-do-card-image {
+      margin: 0 0 8px;
+      max-width: 300px;
+      margin: 0 auto;
+
+      @include bp(desktop-lg) {
+        max-width: 388px;
+      }
+    }
+  
+    .what-we-do-card-title {
+      margin: 0 0 8px;
+      font-weight: 800;
+      font-size: 56px;
+      line-height: 1.1;
+      text-align: left;
+      color: #000;
+
+      @include bp(desktop-lg) {
+        font-size: 64px;
+      }
+    }
+  
+    .what-we-do-card-desc {
+      margin: 0;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.1;
+      text-align: left;
+      color: #000;
+
+      @include bp(desktop-lg) {
+        font-size: 32px;
+      }
+    }
+  }
+}

@@ -1,24 +1,25 @@
-import React from "react"
-import Section from './../components/section';
-import Title from './../components/homepage/title';
+import React, { Fragment } from "react";
 
-import "./../styles/homepage.scss";
+import Header from '../components/shared/header/header';
+import Footer from '../components/shared/footer/footer';
+import Section from '../components/shared/section/section';
+import Title from './../components/homepage/title';
+import Hero from './../components/homepage/hero/hero';
+import AboutUs from './../components/homepage/about-us/about-us';
+import OurServices from './../components/homepage/our-services/our-services';
+
+import "./../styles/core.scss";
 
 export default function Home() {
   return (
-    <main>
-      <Section>
-        <Title text="About Us" />
-      </Section>
-      <Section>
-        <Title text="Our Services" />
-      </Section>
-      <Section>
-        <Title text="Our Clients" />
-      </Section>
-      <Section>
-        <Title text="Get in Touch" />
-      </Section>
-    </main>
+    <Fragment>
+      <Header />
+      <main>
+        <Hero />
+        <AboutUs />
+        <OurServices />
+      </main>
+      <Footer />
+    </Fragment>
   )
 }

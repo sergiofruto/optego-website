@@ -1,0 +1,48 @@
+@import "./reset";
+@import "./mixins";
+
+:root {
+  --page-guttter: 24px;
+  @include bp(tablet) {
+    --page-guttter: 48px;
+  }
+}
+
+//colors 
+$primary-color: #333;
+$primary-yellow: #F8B617;
+$primary-red: #E61853;
+$primary-black: #1A1A1A;
+
+//tipography
+$font-stack: 'Raleway', sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  font-size: 62.5%;
+  color: $primary-color;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+//common
+@import "./../components/shared/header/header.scss";
+@import "./../components/shared/container/container.scss";
+@import "./../components/shared/section-title/section-title.scss";
+@import "./../components/shared/section-subtitle/section-subtitle.scss";
+@import "./../components/shared/aside-mark/aside-mark.scss";
+//homepage
+@import "./../components/homepage/hero/hero.scss";
+@import "./../components/homepage/about-us/about-us.scss";
+@import "./../components/homepage/our-services/our-services.scss";
