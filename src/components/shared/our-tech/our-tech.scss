@@ -1,0 +1,49 @@
+.our-tech-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 48px;
+  grid-gap: 16px;
+  @include bp(tablet) {
+    grid-template-columns: 1fr 1fr 1fr;
+     margin-top: 64px;
+  }
+
+  @include bp(desktop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .our-tech-item {
+    padding: 32px 24px;
+    box-shadow: 0 0 20px #dedede;
+    min-height: 170px;
+  }
+
+  .our-tech-icon-wrapper {
+    position: relative;
+    display: inline-flex;
+    height: 54px;
+    margin-bottom: 16px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: $primary-red;
+      opacity: .3;
+      z-index: -1;
+    }
+  }
+
+  .our-tech-title {
+    font-family: Raleway-Bold;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: left;
+    color: #000;
+  }
+}

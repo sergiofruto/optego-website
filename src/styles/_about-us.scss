@@ -1,0 +1,66 @@
+.about-us-page {
+  position: relative;
+  width: 100%;
+
+  .page-bg-illu-01 {
+    position: absolute;
+    left: -90px;
+    top: 90px;
+    width: 380px;
+    height: 380px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  .about-us-sections {
+    max-width: 1000px;
+    margin: 64px auto 0;
+    @include bp(tablet) {
+      margin-top: 112px;
+    }
+  }
+
+  .about-us-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    @include bp(tablet) {
+      margin-bottom: 64px;
+    }
+
+    .left-panel {
+      @include bp(tablet) {
+        flex: 0 0 50%;
+      }
+    }
+  
+    .right-panel {
+      @include bp(tablet) {
+        flex: 0 0 50%;
+        text-align: right;
+        > .about-us-title, 
+        > .about-us-description {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .about-us-title {
+    margin-bottom: 24px;
+    font-family: Raleway-SemiBold;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 1.2;
+    color: #000;
+  }
+
+  .about-us-description {
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.15;
+    color: #000;
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from "./../../shared/container/container";
 import SectionTitle from '../../shared/section-title/section-title';
 import SectionSubtitle from '../../shared/section-subtitle/section-subtitle';
 import AsideMark from '../../shared/aside-mark/aside-mark';
@@ -10,8 +11,8 @@ import Client3 from './../../../static/client-logo-coca-cola.svg';
 
 const OurServices = () => {
   return (
-    <section class="homepage-our-clients">
-      <div className="inner-wrapper">
+    <section className="homepage-our-clients">
+      <Container>
         <AsideMark number="4" tag="our clients" />
         <div className="content">
           <SectionTitle text="our clients" />
@@ -51,10 +52,10 @@ const OurServices = () => {
             </li>
           </ul>
           <div className="button-row">
-            <Button text="view all clients" link="#" />
+            <Button text="view all clients" link="#" arrow />
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

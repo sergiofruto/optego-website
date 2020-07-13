@@ -1,6 +1,17 @@
 .our-work-outer-container {
-  display: grid;
-  grid-template-columns: 168px 1fr;
+  width: 100%;
+  position: relative;
+
+  .page-bg-illu-01 {
+    position: absolute;
+    left: -330px;
+    top: -180px;
+    width: 700px;
+    height: 700px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
 }
 
 .our-work-main-content {
@@ -15,30 +26,48 @@
   }
 
   .work-wrapper {
-    height: 330px;
-    overflow: hidden;
-    width: 990px;
-    margin: 0 auto;
     position: relative;
-  
+    display: flex;
+    align-items: flex-end;
+    height: 354px;
+    width: 950px;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: pointer;
+
     img {
-      object-fit: cover;
+      position: absolute;
+      display: block;
       width: 100%;
       height: 100%;
-      display: block;
+      object-fit: cover;
+      z-index: 0;
+      transition: all .25s ease-out;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+        transition: all .25s ease-in;
+      }
     }
   }
 
-  .work-title {
-    position: absolute;
-    left: 30px;
-    bottom: 40px;
-    font-family: Raleway-ExtraBold;
-    font-weight: normal;
-    font-size: 92.15px;
-    line-height: 99.7px;
-    text-align: left;
-    color: #fff;
+  .work-info {
+    position: relative;
+    width: 100%;
+    padding: 24px;
+    z-index: 10;
   }
 
+  .work-title {
+    margin-bottom: 16px;
+    font-family: Raleway-ExtraBold;
+    font-weight: normal;
+    font-size: 68px;
+    line-height: 1.1;
+    text-align: left;
+    color: #fff;
+    z-index: 10;
+  }
 }

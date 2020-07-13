@@ -2,15 +2,11 @@
 .page-title {
   font-weight: 800;
   font-size: 40px;
-  line-height: .9;
+  line-height: 1.2;
   text-align: left;
   color: #000000;
 
   @include bp(desktop) {
-    font-size: 100px;
-  }
-
-  @include bp(desktop-lg) {
-    font-size: 152px;
+    font-size: 72px;
   }
 }

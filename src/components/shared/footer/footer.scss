@@ -1,24 +1,28 @@
 .footer {
-  padding: 90px 0 100px;
+  padding: 64px 0 64px;
   margin-top: 72px;
   background-color: $primary-black;
-  padding-left: 168px;
 
   .inner-footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    padding-top: 72px;
+    padding-top: 58px;
   }
 
-  .footer-logo img {
-    width: 320px;
+  .footer-logo {
+    display: flex;
+
+    img {
+      width: 130px;
+    }
   }
 
   .offices-list {
     a {
       font-weight: normal;
-      font-size: 27.56px;
-      line-height: 37.75px;
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: 400;
       text-align: left;
       color: #fff;
       text-decoration: none;
@@ -33,15 +37,27 @@
   }
 
   .site-links ul li { 
-    font-family: Raleway-SemiBold;
     font-weight: normal;
-    font-size: 31px;
-    line-height: 49px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
     text-align: left;
     color: #fff;
+
+    &:not(last-child) {
+      margin-bottom: 20px;
+    }
   }
 
-  .hero-social-links a {
-    color: white;
+  .footer-social-links {
+    font-size: 20px;
+
+    li:not(last-child) {
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: white;
+    }
   }
 }

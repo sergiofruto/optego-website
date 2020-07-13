@@ -1,0 +1,85 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  z-index: 100;
+
+  .bg-illus-dashed-circle {
+    position: absolute;
+    left: -100px;
+    bottom: 18vh;
+    width: 370px;
+    height: 370px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  &.animate__animated.animate__bounce {
+    --animate-duration: 350ms;
+  }
+
+  .modal-content {
+    width: 100%;
+    position: relative;
+    align-items: center;
+    display: flex;
+  }
+
+  .container {
+    width: 100%;
+    position: relative;
+  }
+
+
+  .close-menu-button {
+    position: absolute;
+    top: 64px;
+    right: 65px;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .nav-list-item {
+    margin-bottom: 16px;
+
+    @include bp(desktop) {
+      margin-bottom: 32px;
+    }
+
+    a {
+      display: block;
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 1.2;
+      text-align: left;
+      color: #000;
+      text-decoration: none;
+      transform: translateX(0);
+      transition: all .25s ease-in;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $primary-red;
+        transition: all .25s ease-in;
+        // margin-left: 10px;
+        transform: translateX(10px);
+      }
+    
+      @include bp(desktop) {
+        font-size: 72px;
+      }
+    }
+  }
+}

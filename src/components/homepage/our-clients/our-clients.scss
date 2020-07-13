@@ -1,17 +1,9 @@
 .homepage-our-clients{
   padding-top: 60px;
-
-  .aside-mark .aside-tag {
-    left: -3px;
-    top: 85px;
-  }
+  position: relative;
 
   @include bp(desktop) {
     padding-top: 120px;
-  }
-
-  @include bp(desktop-lg) {
-    padding-top: 230px;
   }
 
   .inner-wrapper {
@@ -36,7 +28,7 @@
   
     @include bp(desktop) {
       grid-template-columns: 1fr 1fr 1fr;
-      margin-top: 80px;
+      margin-top: 72px;
     }
   }
 
@@ -48,11 +40,14 @@
     }
   
     .client-logo {
-      max-width: 336px;
-      max-height: 70px;
+      max-width: 100%;
       margin: 0 auto;
       transition: all .35s ease-in;
       filter: grayscale(1);
+      @include bp(desktop) {
+        max-width: 336px;
+        max-height: 70px;
+      }
     }
 
 

@@ -1,14 +1,21 @@
 .aside-mark {
-  position: relative;
-  flex: 0 0 168px;
-  padding-left: var(--page-guttter);
-
+  display: none;
+  position: absolute;
+  top: 160px;
+  left: 0;
+  height: 24px;
+  transform: rotate(-90deg);
+  @media (min-width: 1280px) {
+    display: initial;
+  }
   .aside-number {
-    position: relative;
+    position: absolute;
+    right: -10px;
+    transform: rotate(90deg);
     font-family: Raleway-Medium;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 22.67px;
+    font-size: 18px;
+    line-height: 1;
     text-align: left;
     color: #000;
 
@@ -25,15 +32,12 @@
   }
 
   .aside-tag {
-    position: absolute;
-    left: 14px;
-    top: 70px;
-    font-size: 24px;
-    line-height: 22.67px;
+    padding-right: 25px;
+    font-size: 16px;
+    line-height: 1;
     font-weight: 100;
     text-align: left;
     color: #000;
-    transform: rotate(-90deg);
     white-space: nowrap;
   }
 }

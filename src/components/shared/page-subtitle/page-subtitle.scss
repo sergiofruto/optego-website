@@ -3,23 +3,25 @@
   font-family: Raleway-Medium;
   font-weight: normal;
   font-size: 35px;
-  line-height: 1.2;
+  line-height: 1.1;
   text-align: left;
   color: #000;
 
   @include bp(desktop) {
-    font-size: 72px;
-    margin-top: 16px;
+    font-size: 38px;
+    margin-top: 24px;
     margin-left: 160px;
     position: relative;
+    max-width: 636px;
+    padding-bottom: 60px;
 
     &:before {
       content: '';
       position: absolute;
-      left: -20px;
-      top: 10px;
-      width: 8px;
-      height: 117%;
+      left: -26px;
+      top: 0;
+      width: 6px;
+      height: 100%;
       background-color: #EF7022;
     }
   }

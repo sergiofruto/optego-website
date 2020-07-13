@@ -8,6 +8,7 @@ import Hero from './../components/homepage/hero/hero';
 import AboutUs from './../components/homepage/about-us/about-us';
 import OurServices from './../components/homepage/our-services/our-services';
 import OurClients from './../components/homepage/our-clients/our-clients';
+import ContactUs from './../components/shared/contact-us/contact-us';
 
 import "./../styles/core.scss";
 
@@ -20,6 +21,7 @@ export default function Home() {
         <AboutUs />
         <OurServices />
         <OurClients />
+        <ContactUs />
       </main>
       <Footer />
     </Fragment>

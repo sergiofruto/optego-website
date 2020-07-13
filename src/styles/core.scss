@@ -1,5 +1,6 @@
 @import "./reset";
 @import "./mixins";
+@import "./animate";
 
 :root {
   --page-guttter: 24px;
@@ -38,6 +39,7 @@ main {
 
 //common
 @import "./../components/shared/header/header.scss";
+@import "./../components/shared/modal/modal.scss";
 @import "./../components/shared/footer/footer.scss";
 @import "./../components/shared/container/container.scss";
 @import "./../components/shared/section-title/section-title.scss";
@@ -52,6 +54,10 @@ main {
 @import "./../components/homepage/about-us/about-us.scss";
 @import "./../components/homepage/our-services/our-services.scss";
 @import "./../components/homepage/our-clients/our-clients.scss";
+@import "./../components/shared/contact-us/contact-us.scss";
+@import "./../components/shared/our-tech/our-tech.scss";
 
 //our work
 @import "./our-work";
+@import "./about-us";
+@import "./campaign";

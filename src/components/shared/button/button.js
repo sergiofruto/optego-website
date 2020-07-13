@@ -1,9 +1,17 @@
 import React from 'react';
+import classnames from 'classnames';
 
-const Button = ({text, link, color, size}) => {
+import Arrow from './../../../static/icon-arrow-white.svg';
+
+const withArrowStyles = {
+  backgroundImage: 'url(' + Arrow + ')',
+}
+
+const Button = ({text, link, small, arrow}) => {
   return (
-    <a className="main-btn" href={link}>
+    <a className={classnames('main-btn', { small: small})} href={link}>
       {text}
+      {arrow && <span className="main-btn-arrow" style={withArrowStyles} />}
     </a>
   );
 };
