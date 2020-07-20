@@ -8,7 +8,7 @@ import Button from '../../shared/button/button';
 import Icon1 from './../../../static/our-services-icon-1.svg';
 import Icon2 from './../../../static/our-services-icon-2.svg';
 import Icon3 from './../../../static/our-services-icon-3.svg';
-import Arrow from './../../../static/arrow-right.svg'
+import IconArrow from './../../../static/arrow-right.svg'
 
 const OurServices = () => {
   return (
@@ -24,11 +24,11 @@ const OurServices = () => {
             <li className="our-services-item">
               <a href="#">
                 <div className="icon-wrapper">
-                  <img src={Icon1} alt="" className="icon"/>
+                  <Icon1 className="icon" />
                 </div>
                 <h2>data driven decisions</h2>
                 <div className="bottom-text">
-                  <img src={Arrow} alt="arrow"/>
+                  <IconArrow />
                   <p>analytics & data intelligence</p>
                 </div>
               </a>
@@ -36,11 +36,11 @@ const OurServices = () => {
             <li className="our-services-item">
               <a href="#">
                 <div className="icon-wrapper">
-                  <img src={Icon2} alt="" className="icon"/>
+                  <Icon2 className="icon" />
                 </div>
                 <h2>paid <br /> media</h2>
                 <div className="bottom-text">
-                  <img src={Arrow} alt="arrow"/>
+                  <IconArrow />
                   <p>programática & platform marketing</p>
                 </div>
               </a>
@@ -48,11 +48,11 @@ const OurServices = () => {
             <li className="our-services-item">
               <a href="#">
                 <div className="icon-wrapper">
-                  <img src={Icon3} alt="" className="icon"/>
+                  <Icon3 className="icon" />
                 </div>
                 <h2>atomicé design</h2>
                 <div className="bottom-text">
-                  <img src={Arrow} alt="arrow"/>
+                  <IconArrow />
                   <p>design optimization UX UI</p>
                 </div>
               </a>

@@ -2,14 +2,14 @@ import React from 'react';
 import Container from "./../../shared/container/container";
 import { FaLinkedinIn, FaBehance, FaDribbble, FaRegEnvelope } from 'react-icons/fa';
 
-import LogoWhite from "./../../../static/optego-logo-white.png";
+// import LogoWhite from "./../../../../static/optego-logo-white.png";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <Container>
         <a href="" className="footer-logo">
-          <img src={LogoWhite} alt=""/>
+          <img src={`./../../../../static/optego-logo-white.png`} alt=""/>
         </a>
         <div className="inner-footer">
           <ul className="offices-list">

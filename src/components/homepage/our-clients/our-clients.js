@@ -22,32 +22,32 @@ const OurServices = () => {
           <ul className="our-clients-grid">
             <li className="our-clients-item">
               <a className="client-link" href="#">
-                <img className="client-logo" src={Client1} alt=""/>
+                <img className="client-logo" src={`./../../../client-logo-movistar.svg`} alt=""/>
               </a>
             </li>
             <li className="our-clients-item">
               <a className="client-link" href="#">
-                <img className="client-logo" src={Client2} alt=""/>
+                <img className="client-logo" src={`./../../../client-logo-sams-club.svg`} alt=""/>
               </a>
             </li>
             <li className="our-clients-item">
               <a className="client-link" href="#">
-                <img className="client-logo" src={Client3} alt=""/>
+                <img className="client-logo" src={`./../../../client-logo-coca-cola.svg`} alt=""/>
               </a>
             </li>
             <li className="our-clients-item">
               <a className="client-link" href="#">
-                <img className="client-logo" src={Client1} alt=""/>
+                <img className="client-logo" src={`./../../../client-logo-movistar.svg`} alt=""/>
               </a>
             </li>
             <li className="our-clients-item">
               <a className="client-link" href="#">
-                <img className="client-logo" src={Client2} alt=""/>
+                <img className="client-logo" src={`./../../../client-logo-sams-club.svg`} alt=""/>
               </a>
             </li>
             <li className="our-clients-item">
               <a className="client-link" href="#">
-                <img className="client-logo" src={Client3} alt=""/>
+                <img className="client-logo" src={`./../../../client-logo-coca-cola.svg`} alt=""/>
               </a>
             </li>
           </ul>

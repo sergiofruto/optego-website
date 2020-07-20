@@ -20,9 +20,9 @@
     .hero-title {
       width: 100%;
       margin-bottom: 48px;
-
+      font-weight: 800;
       @include bp(desktop) {
-        flex: 1 0 calc(64% - 38px);
+        flex: 1 0 calc(59% - 38px);
         width: auto;
         padding-right: 38px;
         margin-bottom: 0;
@@ -43,7 +43,7 @@
       }
 
       @include bp(desktop) {
-        flex:  0 0 40%;
+        flex:  0 0 41%;
         height: 570px;
         width: initial;
         margin: 0;

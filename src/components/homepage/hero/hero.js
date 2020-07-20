@@ -1,10 +1,12 @@
 import React from 'react';
 import classnames from 'classnames';
-
+import VisibilitySensor from 'react-visibility-sensor';
 import { FaLinkedinIn, FaBehance, FaDribbble, FaRegEnvelope } from 'react-icons/fa';
 
 import Container from "./../../shared/container/container";
-import HeroImage from "./../../../static/hero-image@2x.png";
+
+// import HeroImage from "./../../../../static/hero-image@2x.png";
+
 
 const Hero = () => {
   return (
@@ -35,13 +37,15 @@ const Hero = () => {
       </aside>
       <Container>
         <div className="inner-hero">
-          <h1 className={classnames('hero-title', 'animate__animated animate__fadeIn')}>
-            <span>welcome to digital marketing services</span>
-            <strong> based on data knowledge</strong>
-            <span> and <br/> practical experience</span>
-          </h1>
+          <div className="animate__animated animate__fadeIn">
+            <h1 className={classnames('hero-title', 'animate__animated animate__fadeInUp')}>
+              welcome to digital marketing services
+              <strong> based on data knowledge </strong>
+              and <br/> practical experience
+            </h1>
+          </div>
           <div className={classnames('hero-image-wrapper', 'animate__animated animate__fadeIn')}>
-            <img src={HeroImage} alt="Hero Image"/>
+            <img src={`./../../../../hero-image@2x.png`} alt="Hero Image"/>
           </div>
         </div>
       </Container>

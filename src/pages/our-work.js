@@ -9,10 +9,9 @@ import ContactUs from './../components/shared/contact-us/contact-us';
 
 import "./../styles/core.scss";
 
-import Image1 from "./../static/works-1.png";
-import Image2 from "./../static/works-2.jpg";
-import Image3 from "./../static/works-3.png";
-
+// import Image1 from "./../../static/works-1.png";
+// import Image2 from "./../../static/works-2.jpg";
+// import Image3 from "./../../static/works-3.png";
 
 import bgIllus01 from "./../static/bg-illus-circle.svg";
 
@@ -37,21 +36,21 @@ export default function OurWork() {
               <PageSubtitle text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
               <div className="works-grid">
                 <div className="work-wrapper animate__animated animate__fadeInUp">
-                  <img src={Image1} alt="" />
+                  <img src={`./../../static/works-1.png`} alt="" />
                   <div className="work-info">
                     <h2 className="work-title">Coca Cola</h2>
                     <Button text="view campaign" link="/campaign" arrow small />
                   </div>
                 </div>
                 <div className="work-wrapper">
-                  <img src={Image2} alt="" />
+                  <img src={`./../../static/works-2.png`} alt="" />
                   <div className="work-info">
                     <h2 className="work-title">Mauricio Macri</h2>
                     <Button text="view campaign" link="#" arrow small />
                   </div>
                 </div>
                 <div className="work-wrapper">
-                  <img src={Image3} alt="" />
+                  <img src={`./../../static/works-3.png`} alt="" />
                   <div className="work-info">
                     <h2 className="work-title">Movistar</h2>
                     <Button text="view campaign" link="#" arrow small />
