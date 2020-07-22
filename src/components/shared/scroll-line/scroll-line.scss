@@ -1,0 +1,41 @@
+.scroll-line {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width: 1px;
+  height: 0;
+  background-color: $primary-yellow;
+  animation: drawLine 2s ease-in forwards;
+
+  @keyframes drawLine {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: 100%;
+    }
+  }
+
+  @keyframes drawLineHomepage {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: 50%;
+    }
+  }
+}
+.homepage-hero {
+  .scroll-line {
+    top: 50%;
+    animation: drawLineHomepage 2s ease-in forwards;
+  }
+}
+
+.contact-us-section {
+  .scroll-line {
+    max-height: 26%;
+  }
+}

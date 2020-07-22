@@ -48,6 +48,8 @@ main {
 @import "./../components/shared/section-subtitle/section-subtitle.scss";
 @import "./../components/shared/aside-mark/aside-mark.scss";
 @import "./../components/shared/button/button.scss";
+@import "./../components/shared/animated-arrow-down/animated-arrow-down.scss";
+@import "./../components/shared/scroll-line/scroll-line.scss";
 
 //homepage
 @import "./../components/homepage/hero/hero.scss";
@@ -61,3 +63,4 @@ main {
 @import "./our-work";
 @import "./about-us";
 @import "./campaign";
+@import "./animations";

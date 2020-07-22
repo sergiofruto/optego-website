@@ -1,8 +1,25 @@
 .homepage-hero {
   position: relative;
-
   @include bp(tablet) {
+    position: relative;
     padding-left: 100px;
+    min-height: calc(100vh - 103px);
+  }
+
+  @include bp(desktop) {
+    position: relative;
+    min-height: calc(100vh - 103px);
+  }
+
+  &__aside {
+    position: absolute;
+    left: 0;
+    width: 100px;
+    height: 100%;
+  }
+
+  &__mark-wrapper {
+    position: relative;
   }
 
   .container {
@@ -87,35 +104,37 @@
   }
 }
 
-.hero-social-links {
-  display: none;
-  position: absolute;
-  width: 100px;
-  left: 0;
-  top: 20%;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0;
-
-  @include bp(tablet) {
-    display: flex;
-    flex-direction: column;
+.homepage-hero {
+  &__social-links {
+    display: none;
+    position: relative;
+    width: 83px;
+    left: 0;
+    top: 120px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  
+    @include bp(tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    li:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
-
-  li:not(:last-child) {
-    margin-bottom: 20px;
-  }
-}
-
-.hero-social-link {
-  font-size: 16px;
-  line-height: 1;
-  display: inline-flex;
-  color: $primary-color;
-  transition: all .25s linear;
-
-  &:hover,
-  &:focus {
-    color: $primary-red;
+  
+  &__social-link {
+    font-size: 16px;
+    line-height: 1;
+    display: inline-flex;
+    color: $primary-color;
+    transition: all .25s linear;
+  
+    &:hover,
+    &:focus {
+      color: $primary-red;
+    }
   }
 }

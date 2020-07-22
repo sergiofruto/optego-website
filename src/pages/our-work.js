@@ -9,11 +9,7 @@ import ContactUs from './../components/shared/contact-us/contact-us';
 
 import "./../styles/core.scss";
 
-// import Image1 from "./../../static/works-1.png";
-// import Image2 from "./../../static/works-2.jpg";
-// import Image3 from "./../../static/works-3.png";
-
-import bgIllus01 from "./../static/bg-illus-circle.svg";
+import bgIllus01 from "./../../static/bg-illus-circle.svg";
 
 const bgIllusStyles1 = {
   backgroundImage: 'url(' + bgIllus01 + ')',

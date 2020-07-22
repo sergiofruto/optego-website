@@ -2,42 +2,36 @@
   display: none;
   position: absolute;
   top: 160px;
-  left: 0;
+  left: -41px;
   height: 24px;
+  width: 100px;
   transform: rotate(-90deg);
-  @media (min-width: 1280px) {
-    display: initial;
-  }
-  .aside-number {
-    position: absolute;
-    right: -10px;
-    transform: rotate(90deg);
-    font-family: Raleway-Medium;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 1;
-    text-align: left;
-    color: #000;
+  transform-origin: 100% 100%;
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 5px;
-      right: -10px;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: $primary-red;
-    }
+  @media (min-width: 1280px) {
+    display: flex;
   }
 
   .aside-tag {
-    padding-right: 25px;
+    padding-right: 16px;
     font-size: 16px;
     line-height: 1;
     font-weight: 100;
     text-align: left;
     color: #000;
     white-space: nowrap;
+  }
+
+  .aside-number {
+    font-family: Raleway-Medium;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1;
+    text-align: left;
+    color: #000;
+    > span {
+      position: absolute;
+      transform: rotate(90deg);
+    }
   }
 }

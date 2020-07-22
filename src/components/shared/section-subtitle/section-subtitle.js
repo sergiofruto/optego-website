@@ -1,11 +1,16 @@
 import React from 'react';
+import classnames from 'classnames';
 
-const SectionSubtitle = ({ text }) => {
+const SectionSubtitle = ({ text, isVisible }) => {
   return (
-    <p className="section-subtitle animate__animated animate__fadeInUp">
+    <p className={classnames('section-subtitle', 'animate__animated', (isVisible && 'animate__fadeInUp'))}>
       {text}
     </p>
   );
+};
+
+SectionSubtitle.defaultProps = {
+  isVisible: true
 };
 
 export default SectionSubtitle;

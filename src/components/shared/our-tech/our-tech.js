@@ -3,9 +3,9 @@ import Container from "./../../shared/container/container";
 import SectionTitle from '../../shared/section-title/section-title';
 import SectionSubtitle from '../../shared/section-subtitle/section-subtitle';
 
-import Icon01 from './../../../static/icon-tech-01.svg';
-import Icon02 from './../../../static/icon-tech-02.svg';
-import Icon03 from './../../../static/icon-tech-03.svg';
+import Icon01 from './../../../../static/icon-tech-01.svg';
+import Icon02 from './../../../../static/icon-tech-02.svg';
+import Icon03 from './../../../../static/icon-tech-03.svg';
 
 // const techList = {
 //   {

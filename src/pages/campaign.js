@@ -2,15 +2,10 @@ import React, { Fragment } from "react";
 
 import Header from '../components/shared/header/header';
 import Footer from '../components/shared/footer/footer';
-import Container from '../components/shared/container/container';
 import Hero from '../components/campaign/hero';
 import ContactUs from '../components/shared/contact-us/contact-us';
 
 import "./../styles/core.scss";
-
-// import HeroImage from "./../../static/capaign-hero-01.png";
-// import Image1 from "./../../static/works-1.png";
-// import Image2 from "./../../static/campaign-image-03@2x.png";
 
 export default function OurWork() {
   return (

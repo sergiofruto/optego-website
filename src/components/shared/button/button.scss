@@ -14,14 +14,41 @@
   text-align: center;
   color: #fff;
   text-decoration: none;
-  transition: all .25s ease-out;
+  position: relative;
+  transition: background-color 300ms ease-out;
   cursor: pointer;
 
-  .main-btn-arrow {
-    width: 24px;
-    height: 18px;
-    margin-left: 16px;
-    background-size: cover;
+  span {
+    display: inline-block;
+    position: relative;
+    transition: all 300ms ease-out;
+    will-change: transform;
+    padding-right: 8px;
+  }
+
+  &:hover span {
+    transform: translate3d(-1rem, 0, 0);
+  }
+
+  svg {
+    position: absolute;
+    width: 1.1em;
+    right: 0px;
+    right: 0rem;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 300ms ease-out;
+    will-change: right, opacity;
+    * {
+      stroke-width: 5;
+      stroke-color: transparent;
+    }
+  }
+
+  &:hover svg {
+    opacity: 1;
+    right: -2rem;
   }
 
   &:hover,
@@ -29,10 +56,6 @@
   &:focus {
     background-color: #C11445;
     transition: all .25s ease-in;
-
-    // .main-btn-arrow {
-    //   margin-left: 24px;
-    // }
   }
 
   &.small {
@@ -41,11 +64,5 @@
     text-align: left;
     color: #fff;
     padding: 10px 16px;
-
-    .main-btn-arrow {
-      width: 16px;
-      height: 12px;
-      margin-left: 16px;
-    }
   }
 }

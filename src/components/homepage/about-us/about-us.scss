@@ -44,11 +44,26 @@
 
     @include bp(desktop) {
       max-width: 290px;
+      opacity: 0;
     }
 
     &:nth-child(1),
     &:nth-child(3) {
       padding-top: 100px;
+    }
+
+    &:nth-child(1) {
+      --animate-delay: 250ms;
+    }
+    &:nth-child(2) {
+      --animate-delay: 500ms;
+    }
+    &:nth-child(3) {
+      --animate-delay: 750ms;
+    }
+
+    &.animate__fadeInUp {
+      animation-name: myFadeInUp;
     }
 
     .what-we-do-card-image {
@@ -85,6 +100,18 @@
       @include bp(desktop-lg) {
         font-size: 20px;
       }
+    }
+  }
+
+
+  @keyframes myFadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 50%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateZ(0);
     }
   }
 }

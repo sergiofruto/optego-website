@@ -1,54 +1,58 @@
 import React from 'react';
 import classnames from 'classnames';
-import VisibilitySensor from 'react-visibility-sensor';
 import { FaLinkedinIn, FaBehance, FaDribbble, FaRegEnvelope } from 'react-icons/fa';
 
 import Container from "./../../shared/container/container";
+import AnimatedArrowDown from "./../../shared/animated-arrow-down/animated-arrow-down";
+import ScrollLine from './../../shared/scroll-line/scroll-line';
 
-// import HeroImage from "./../../../../static/hero-image@2x.png";
-
-
-const Hero = () => {
+const Hero = ({ title, image, imageAlt}) => {
   return (
-    <section className="homepage-hero animate__animated animate__fadeIn">
-      <aside>
-        <ul className="hero-social-links">
+    <section className="homepage-hero">
+      <ScrollLine />
+      <aside className="homepage-hero__aside animate__animated animate__fadeIn animate__delay-1s">
+        <ul className="homepage-hero__social-links">
           <li>
-            <a className="hero-social-link" href="#">
+            <a className="homepage-hero__social-link" href="#">
               <FaLinkedinIn />
             </a>
           </li>
           <li>
-            <a className="hero-social-link" href="#">
+            <a className="homepage-hero__social-link" href="#">
               <FaBehance />
             </a>
           </li>
           <li>
-            <a className="hero-social-link" href="#">
+            <a className="homepage-hero__social-link" href="#">
               <FaDribbble />
             </a>
           </li>
           <li>
-            <a className="hero-social-link" href="#">
+            <a className="homepage-hero__social-link" href="#">
               <FaRegEnvelope />
             </a>
           </li>
         </ul>
+        <div className="homepage-hero__mark-wrapper">
+          <div className="aside-mark">
+            <span className="aside-tag">home</span>
+            <span className="aside-number"><span>01</span></span>
+          </div>
+        </div>
       </aside>
       <Container>
         <div className="inner-hero">
           <div className="animate__animated animate__fadeIn">
-            <h1 className={classnames('hero-title', 'animate__animated animate__fadeInUp')}>
-              welcome to digital marketing services
-              <strong> based on data knowledge </strong>
-              and <br/> practical experience
-            </h1>
+            <h1 className={classnames('hero-title', 'animate__animated animate__fadeIn animate__delay-1s')}
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
           </div>
-          <div className={classnames('hero-image-wrapper', 'animate__animated animate__fadeIn')}>
-            <img src={`./../../../../hero-image@2x.png`} alt="Hero Image"/>
+          <div className={classnames('hero-image-wrapper', 'animate__animated animate__fadeIn animate__delay-1s')}>
+            <img src={image} alt={imageAlt} />
           </div>
         </div>
       </Container>
+      <AnimatedArrowDown />
     </section>
   );
 };

@@ -4,7 +4,11 @@ const AsideMark = ({number, tag}) => {
   return (
     <aside className="aside-mark">
       <span className="aside-tag">{tag}</span>
-      <span className="aside-number">{number}</span>
+      <span className="aside-number">
+        <span>
+          {number}
+        </span>
+      </span>
     </aside>
   );
 };

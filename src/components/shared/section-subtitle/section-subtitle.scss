@@ -2,9 +2,15 @@
 .section-subtitle {
   max-width: 782px;
   margin-top: 16px;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.2;
   font-weight: 400;
   text-align: left;
   color: #000;
+  opacity: 0;
+
+  @include bp(desktop) {
+    font-size: 24px;
+    opacity: 0;
+  }
 }

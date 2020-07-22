@@ -1,0 +1,22 @@
+{
+  "Main": {
+    "hero_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Hero Title"
+      }
+    },
+    "hero_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 1230,
+          "height": 1138
+        },
+        "thumbnails": [],
+        "label": "Hero Image"
+      }
+    }
+  }
+}

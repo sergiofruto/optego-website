@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from "gatsby"
 import Container from "./../../shared/container/container";
 
-import bgIllus from "./../../../static/bg-illus-circle.svg";
-import iconMenuClose from "./../../../static/icon-menu-close.svg";
+import bgIllus from "./../../../../static/bg-illus-circle.svg";
+import iconMenuClose from "./../../../../static/icon-menu-close.svg";
 
 const bgIllusStyles1 = {
   backgroundImage: 'url(' + bgIllus + ')',

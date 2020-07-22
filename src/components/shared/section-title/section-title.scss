@@ -8,6 +8,7 @@
 
   @include bp(desktop) {
     font-size: 66px;
+    opacity: 0;
   }
 
   @include bp(desktop-lg) {

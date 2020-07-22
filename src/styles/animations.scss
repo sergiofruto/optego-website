@@ -1,0 +1,24 @@
+.header.animate__delay-1s {
+  --animate-delay: 1.5s;
+}
+
+.homepage-hero {
+  .animate__delay-1s {
+    --animate-delay: 1.5s;
+  }
+}
+
+.home-load-animation {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+  > svg {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}

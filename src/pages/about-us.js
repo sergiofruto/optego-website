@@ -11,11 +11,11 @@ import ContactUs from './../components/shared/contact-us/contact-us';
 
 import "./../styles/core.scss";
 
-import Image1 from "./../static/about-us-illus-01.svg";
-import Image2 from "./../static/about-us-illus-02.svg";
-import Image3 from "./../static/about-us-illus-03.svg";
+import Image1 from "./../../static/about-us-illus-01.svg";
+import Image2 from "./../../static/about-us-illus-02.svg";
+import Image3 from "./../../static/about-us-illus-03.svg";
 
-import bgIllus01 from "./../static/bg-illus-circle.svg";
+import bgIllus01 from "./../../static/bg-illus-circle.svg";
 
 const bgIllusStyles1 = {
   backgroundImage: 'url(' + bgIllus01 + ')',

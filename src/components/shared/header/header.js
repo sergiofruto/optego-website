@@ -1,28 +1,24 @@
 import React, { useState, useRef } from 'react';
+import classnames from 'classnames';
 import { Link } from "gatsby"
 import Container from "./../container/container";
 import Modal from "./../modal/modal";
 
-// import Logo from "./../../../../static/optego-logo-color.png";
-// import IconMenu from "./../../../../static/icon-menu.svg";
+// import WipeAnimation from "./../../../../static/menu-animation-c.svg";
 
-// import MenuAnimated from "./../../..static/menu-animation-b.svg";
-import WipeAnimation from "./../../../../static/menu-animation-c.svg";
-
-const Header = () => {
+const Header = ({ homeAnimation }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const wipeAnimationRef = useRef(null);
+  // const wipeAnimationRef = useRef(null);
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   }
-
-  const triggerAnimation = () => {
-    wipeAnimationRef.click()
-  }
+  // const triggerAnimation = () => {
+  //   wipeAnimationRef.click()
+  // }
 
   return (
-    <header className="header">
+    <header className={classnames('header', (homeAnimation && 'animate__animated animate__fadeIn animate__delay-1s'))}>
       <Container>
         <Link to="/" className="header-logo">
           <img src={`./../../../../optego-logo-color.png`} alt="Optego Logo"/>
@@ -31,7 +27,7 @@ const Header = () => {
           <img 
             src={`./../../../../icon-menu.svg`}
             alt="menu icon"
-            onClick={() => triggerAnimation()}/>
+            onClick={() => handleMenuToggle()}/>
         </button>
       </Container>
       {isMenuOpen && <Modal handleMenuToggle={ handleMenuToggle } />}
