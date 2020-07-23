@@ -37,7 +37,7 @@ const Index = ({ data: { prismicHomepage } }) => {
   return(
     <Fragment>
       <Header homeAnimation/>
-        <main>
+        <main className="page-top">
           <Hero
             title={prismicHomepage.data.hero_title.text}
             image={prismicHomepage.data.hero_image.url}

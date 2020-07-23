@@ -3,19 +3,21 @@ import classnames from 'classnames';
 import { Link } from "gatsby"
 import Container from "./../container/container";
 import Modal from "./../modal/modal";
-
-// import WipeAnimation from "./../../../../static/menu-animation-c.svg";
+import WipeAnimationOut from "./../../../../static/menu-animation-final-2.svg";
 
 const Header = ({ homeAnimation }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const wipeAnimationRef = useRef(null);
+  const [isMenuOpening, setIsMenuOpening] = useState(false);
+  const [isMenuClosing, setIsMenuClosing] = useState(false);
 
-  const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const handleMenuToggle = (menuOut) => {
+    if (menuOut) {
+      setIsMenuClosing(true);
+      setTimeout(() => {
+        setIsMenuClosing(false);
+      }, 1200);
+    }
+    setIsMenuOpening(!isMenuOpening);
   }
-  // const triggerAnimation = () => {
-  //   wipeAnimationRef.click()
-  // }
 
   return (
     <header className={classnames('header', (homeAnimation && 'animate__animated animate__fadeIn animate__delay-1s'))}>
@@ -30,9 +32,12 @@ const Header = ({ homeAnimation }) => {
             onClick={() => handleMenuToggle()}/>
         </button>
       </Container>
-      {isMenuOpen && <Modal handleMenuToggle={ handleMenuToggle } />}
-      {/* <WipeAnimation className="wipe-animation" /> */}
-      {/* <object type="image/svg+xml" data={"./../../../../static/menu-animation-b.svg"}></object> */}
+      {isMenuClosing &&
+        <div className="modal-load-animation">
+          <WipeAnimationOut />
+        </div>
+      }
+      {isMenuOpening && <Modal handleMenuToggle={ handleMenuToggle } />}
     </header>
   );
 };

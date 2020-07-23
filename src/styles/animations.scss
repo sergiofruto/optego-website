@@ -22,3 +22,82 @@
     height: 100vh;
   }
 }
+
+.modal {
+  .nav-list-item.animate__fadeInRight.animate__delay-1s{
+    animation-name: fadeInRightNew;
+    --animate-duration: 800ms;
+    &:nth-child(1){--animate-delay: 700ms;}
+    &:nth-child(2){--animate-delay: 1000ms}
+    &:nth-child(3){--animate-delay: 1300ms}
+    &:nth-child(4){--animate-delay: 1600ms}
+  }
+}
+
+.about-us-section {
+  .left-panel,
+  .right-panel {
+    opacity: 0;
+  }
+  .animate__fadeInLeft {
+    animation-name: fadeInLeftNew;
+  }
+  .animate__fadeInRight {
+    animation-name: fadeInRightNew;
+  }
+}
+
+.our-tech-item.animate__fadeInUp {
+  animation-name: fadeInTopNew;
+}
+
+.about-us-page {
+  .page-bg-illu-01 {
+    animation: rotating 140s linear;
+  }
+}
+
+@keyframes fadeInTopNew {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeInRightNew {
+  0% {
+    opacity: 0;
+    transform: translate3d(200px, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeInLeftNew {
+  0% {
+    opacity: 0;
+    transform: translate3d(-200px, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

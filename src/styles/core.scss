@@ -37,6 +37,16 @@ main {
   overflow: hidden;
 }
 
+.page-top {
+  @include bp(tablet) {
+    padding-top: 104px;
+  }
+}
+
+p strong {
+  color: $primary-yellow;
+}
+
 //common
 @import "./../components/shared/header/header.scss";
 @import "./../components/shared/modal/modal.scss";
@@ -50,6 +60,8 @@ main {
 @import "./../components/shared/button/button.scss";
 @import "./../components/shared/animated-arrow-down/animated-arrow-down.scss";
 @import "./../components/shared/scroll-line/scroll-line.scss";
+@import "./../components/shared/jobs/jobs.scss";
+
 
 //homepage
 @import "./../components/homepage/hero/hero.scss";
@@ -61,6 +73,7 @@ main {
 
 //our work
 @import "./our-work";
+@import "./our-people";
 @import "./about-us";
 @import "./campaign";
 @import "./animations";

@@ -2,6 +2,8 @@
   padding: 64px 0 64px;
   margin-top: 72px;
   background-color: $primary-black;
+  position: relative;
+  z-index: 500;
 
   .inner-footer {
     display: grid;

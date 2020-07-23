@@ -3,11 +3,11 @@
   position: relative;
 
   .page-bg-illu-01 {
-    position: absolute;
-    left: -330px;
-    top: -180px;
-    width: 700px;
-    height: 700px;
+    position: fixed;
+    left: -200px;
+    top: 120px;
+    width: 400px;
+    height: 400px;
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -1;
@@ -16,6 +16,8 @@
 
 .our-work-main-content {
   margin-top: 80px;
+  position: relative;
+  z-index: 100;
 
   .works-grid {
     display: grid;

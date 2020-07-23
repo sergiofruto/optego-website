@@ -9,7 +9,7 @@ import ScrollLine from './../../shared/scroll-line/scroll-line';
 const Hero = ({ title, image, imageAlt}) => {
   return (
     <section className="homepage-hero">
-      <ScrollLine />
+      <ScrollLine animate />
       <aside className="homepage-hero__aside animate__animated animate__fadeIn animate__delay-1s">
         <ul className="homepage-hero__social-links">
           <li>
