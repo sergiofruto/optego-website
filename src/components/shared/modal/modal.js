@@ -25,6 +25,9 @@ const Modal = ({ handleMenuToggle }) => {
           <nav className="nav-menu">
             <ul className="nav-list">
               <li className="nav-list-item animate__animated animate__fadeInRight animate__delay-1s">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="nav-list-item animate__animated animate__fadeInRight animate__delay-1s">
                 <Link to="/about-us">About us</Link>
               </li>
               <li className="nav-list-item animate__animated animate__fadeInRight animate__delay-1s">

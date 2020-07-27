@@ -61,6 +61,7 @@ p strong {
 @import "./../components/shared/animated-arrow-down/animated-arrow-down.scss";
 @import "./../components/shared/scroll-line/scroll-line.scss";
 @import "./../components/shared/jobs/jobs.scss";
+@import "./../components/shared/layered-animation/layered-animation.scss";
 
 
 //homepage
@@ -72,6 +73,9 @@ p strong {
 @import "./../components/shared/our-tech/our-tech.scss";
 
 //our work
+@import "./../components/our-work/work-module/work-module.scss";
+
+//pages
 @import "./our-work";
 @import "./our-people";
 @import "./about-us";

@@ -27,10 +27,11 @@
   .nav-list-item.animate__fadeInRight.animate__delay-1s{
     animation-name: fadeInRightNew;
     --animate-duration: 800ms;
-    &:nth-child(1){--animate-delay: 700ms;}
-    &:nth-child(2){--animate-delay: 1000ms}
-    &:nth-child(3){--animate-delay: 1300ms}
-    &:nth-child(4){--animate-delay: 1600ms}
+    &:nth-child(1){--animate-delay: 600ms;}
+    &:nth-child(2){--animate-delay: 900ms}
+    &:nth-child(3){--animate-delay: 1200ms}
+    &:nth-child(4){--animate-delay: 1500ms}
+    &:nth-child(5){--animate-delay: 1800ms}
   }
 }
 

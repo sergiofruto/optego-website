@@ -12,6 +12,15 @@
     background-repeat: no-repeat;
     z-index: -1;
   }
+
+  .square-animation{
+    position: absolute;
+    top: 200px;
+    right: -180px;
+    width: 400px;
+    height: 400px;
+    transform: rotate(180deg);
+  }
 }
 
 .our-work-main-content {

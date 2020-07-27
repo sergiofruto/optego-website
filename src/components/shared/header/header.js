@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import classnames from 'classnames';
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 import Container from "./../container/container";
 import Modal from "./../modal/modal";
 import WipeAnimationOut from "./../../../../static/menu-animation-final-2.svg";

@@ -24,15 +24,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Raleway`,
-            variants: [`300`, `500`, `800`, `900`]
-          },
+          `Raleway\:300,500,800,800` // you can also specify font weights and styles
         ],
-      },
+        display: 'swap'
+      }
     },
     {
       resolve: 'gatsby-plugin-react-svg',

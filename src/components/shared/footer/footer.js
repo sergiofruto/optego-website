@@ -1,30 +1,57 @@
 import React from 'react';
 import Container from "./../../shared/container/container";
+import { Link } from "gatsby";
 import { FaLinkedinIn, FaBehance, FaDribbble, FaRegEnvelope } from 'react-icons/fa';
 
-// import LogoWhite from "./../../../../static/optego-logo-white.png";
+import OptegoLogoWhite from './../../../../static/optego-logo-white.svg';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <Container>
-        <a href="" className="footer-logo">
-          <img src={`./../../../../static/optego-logo-white.png`} alt=""/>
-        </a>
+        <div className="footer-logo">
+          <Link to="/">
+            <OptegoLogoWhite />
+          </Link>
+        </div>
         <div className="inner-footer">
           <ul className="offices-list">
-            <li><a href="">University Drive 1130, Miami, Florida</a></li>
-            <li><a href="">Av. Cnel Niceto Vega 5662, Buenos Aires</a></li>
-            <li><a href="">Av. Abraham Lincoln 701 Santo Domingo</a></li>
+            <li className="offices-list__item">
+              <img src="./icon-flag-usa@2x.png" alt="" className="offices-list__flag"/>
+              University Drive 1130, Miami, Florida
+            </li>
+            <li className="offices-list__item">
+              <img src="./icon-flag-arg@2x.png" alt="" className="offices-list__flag" />
+              Av. Cnel Niceto Vega 5662, Buenos Aires
+            </li>
+            <li className="offices-list__item">
+              <img src="./icon-flag-rep@2x.png" alt="" className="offices-list__flag" />
+              Av. Abraham Lincoln 701 Santo Domingo
+            </li>
           </ul>
-          <nav className="site-links">
-            <ul>
-              <li>About us</li>
-              <li>Works</li>
-              <li>Our Tech</li>
-              <li>Clients</li>
-              <li>People</li>
-              <li>Jobs</li>
+          <nav className="footer-nav">
+            <ul className="footer-nav__list">
+              <li className="footer-nav__item">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="footer-nav__item">
+                <Link to="/about-us">About us</Link>
+              </li>
+              <li className="footer-nav__item">
+                <Link to="/about-us">Works</Link>
+              </li>
+              <li className="footer-nav__item">
+                <Link to="/about-us">Our Tech</Link>
+              </li>
+              <li className="footer-nav__item">
+                <Link to="/clients">Clients</Link>
+              </li>
+              <li className="footer-nav__item">
+                <Link to="/people">People</Link>
+              </li>
+              <li className="footer-nav__item">
+                <Link to="/jobs">Jobs</Link>
+              </li>
             </ul>
           </nav>
           <ul className="footer-social-links">
