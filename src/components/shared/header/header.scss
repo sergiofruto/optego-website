@@ -36,19 +36,26 @@
 
   .header-logo {
     display: flex;
-    width: 129px;
+    width: 100px;
     height: auto;
+    @include bp(tablet) {
+      width: 129px;
+    }
   }
 
   .header-menu {
-    width: 24px;
+    width: 30px;
     height: auto;
-    padding: 0;
+    padding: 5px;
     margin: 0;
     border: 0;
     background-color: transparent;
     cursor: pointer;
     outline: none;
+    @include bp(tablet) {
+      width: 24px;
+      padding: 0;
+    }
   }
 
   .modal {

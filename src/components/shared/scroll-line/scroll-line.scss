@@ -1,11 +1,15 @@
 .scroll-line {
-  position: absolute;
-  top: 0;
-  left: 60px;
-  width: 1px;
-  height: 0;
-  background-color: $primary-yellow;
-  animation: drawLine 2s ease-in forwards;
+  display: none;
+  @include bp(tablet) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 1px;
+    height: 0;
+    background-color: $primary-yellow;
+    animation: drawLine 2s ease-in forwards;
+  }
 
   @keyframes drawLine {
     from {
