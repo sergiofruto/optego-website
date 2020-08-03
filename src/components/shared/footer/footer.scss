@@ -1,25 +1,37 @@
 .footer {
-  padding: 64px 0 64px;
-  margin-top: 72px;
+  padding: 32px 0 32px;
+  margin-top: 40px;
   background-color: $primary-black;
   position: relative;
   z-index: 500;
-
+  @include bp(tablet) {
+    padding: 64px 0 64px;
+    margin-top: 72px;
+  }
   .inner-footer {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    padding-top: 58px;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    padding-top: 40px;
+    @include bp(tablet) {
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-column-gap: initial;
+      grid-row-gap: initial;
+      padding-top: 56px;
+    }
   }
 
   .footer-logo {
     display: flex;
-
-    img {
-      width: 130px;
-    }
   }
 
   .offices-list {
+    grid-column: 1 / 3;
+    @include bp(tablet) {
+      grid-column: initial;
+    }
+
     &__item {
       display: flex;
       align-items: center;
@@ -46,6 +58,10 @@
   }
 
   .footer-nav {
+    grid-column: 1 / 2;
+    @include bp(tablet) {
+      grid-column: initial;
+    }
     &__list {
       padding: 0;
     }
@@ -75,7 +91,11 @@
   }
 
   .footer-social-links {
+    grid-column: 2 / 3;
     font-size: 20px;
+    @include bp(tablet) {
+      grid-column: initial;
+    }
 
     li:not(last-child) {
       margin-bottom: 20px;
