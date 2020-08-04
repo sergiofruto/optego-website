@@ -130,7 +130,7 @@ const OurServices = () => {
             <div className="content">
               <SectionTitle text="our clients" isVisible={isVisible} />
               <SectionSubtitle
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non euismod lectus. hendrerit velit sit."
+                text="Optego’s family (that's what we call them) and our work with the best."
                 isVisible={isVisible}
               />
               <ul className={classnames('our-clients-grid', 'animate__animated', (isVisible && 'animate__fadeInUp'))}>

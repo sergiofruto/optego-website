@@ -29,7 +29,7 @@ const OurServices = () => {
             <AsideMark number="03" tag="our services" />
             <SectionTitle text="our services" isVisible={isVisible} />
             <SectionSubtitle
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non euismod lectus. hendrerit velit sit."
+              text="Tech is our passion and data is our love. A mix of everything with magical results."
               isVisible={isVisible}
             />
             <div className={classnames('our-services-slider', 'animate__animated', (isVisible && 'animate__fadeInUp'))}>
@@ -42,7 +42,7 @@ const OurServices = () => {
                     <h2>data driven decisions</h2>
                     <div className="bottom-text">
                       <IconArrow />
-                      <p>analytics & data intelligence</p>
+                      <p>DataScience & Analytics.</p>
                     </div>
                   </a>
                 </li>
@@ -54,7 +54,7 @@ const OurServices = () => {
                     <h2>paid <br /> media</h2>
                     <div className="bottom-text">
                       <IconArrow />
-                      <p>programática & platform marketing</p>
+                      <p>Programmatic & platform marketing</p>
                     </div>
                   </a>
                 </li>
@@ -63,10 +63,10 @@ const OurServices = () => {
                     <div className="icon-wrapper">
                       <Icon3 className="icon" />
                     </div>
-                    <h2>atomicé design</h2>
+                    <h2>CRO</h2>
                     <div className="bottom-text">
                       <IconArrow />
-                      <p>design optimization UX UI</p>
+                      <p>Machine learning & AI</p>
                     </div>
                   </a>
                 </li>

@@ -15,15 +15,6 @@
     }
   }
 
-  .square-animation{
-    position: absolute;
-    top: 300px;
-    right: -220px;
-    width: 400px;
-    height: 400px;
-    transform: rotate(265deg);
-  }
-
   .content {
     flex: 1;
   }
@@ -97,5 +88,14 @@
     @include bp(desktop-lg) {
       margin-top: 80px;
     }
+  }
+
+  .square-animation{
+    position: absolute;
+    top: 300px;
+    right: -220px;
+    width: 400px;
+    height: 400px;
+    transform: rotate(265deg);
   }
 }

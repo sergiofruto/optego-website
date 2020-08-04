@@ -30,8 +30,7 @@ const ContactUs = ({ home }) => {
             <form className={classnames('contact-us-form', 'animate__animated', (isVisible && 'animate__fadeInUp'))}>
               <input className="half" placeholder="name" type="text" />
               <input className="half" placeholder="email" type="email" />
-              <input className="half" placeholder="budget" type="number" />
-              <input className="half" placeholder="services" type="text" />
+              <input className="full" placeholder="services" type="text" />
               <textarea placeholder="message" name="message"></textarea>
               <div className="button-row">
                 <Button text="send" link="#" arrow />

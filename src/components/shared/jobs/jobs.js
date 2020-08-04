@@ -21,7 +21,7 @@ const OurServices = () => {
             <div className="content">
               <SectionTitle text="jobs" isVisible={isVisible} />
               <SectionSubtitle
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non euismod lectus. hendrerit velit sit."
+                text=" we find the coolest people for our coolest positions. Join us in our digital adventures."
                 isVisible={isVisible}
               />
               <ul className={classnames('jobs-grid', 'animate__animated', (isVisible && 'animate__fadeInUp'))}>

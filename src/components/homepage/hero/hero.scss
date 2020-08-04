@@ -36,7 +36,6 @@
 
     .hero-title {
       width: 100%;
-      font-size: 36px;
       padding-top: 16px;
       margin-bottom: 48px;
       font-weight: 800;
@@ -80,12 +79,10 @@
   }
 }
 
-
-
 .hero-title {
   font-family: Raleway-Medium;
   font-weight: normal;
-  font-size: 48px;
+  font-size: 36px;
   line-height: 1.06;
   text-align: left;
   color: #000;
@@ -96,6 +93,7 @@
 
   @include bp(tablet) {
     width: 100%;
+    font-size: 48px;
   }
 
   @include bp(desktop) {

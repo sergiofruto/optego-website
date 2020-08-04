@@ -1,0 +1,54 @@
+.pie-chart {
+  position: relative;
+  width: 232px;
+  height: 232px;
+
+  &__center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    animation: FadeInNumbers 350ms linear 300ms forwards;
+  }
+
+  &__number {
+    font-size: 41px;
+    line-height: 52px;
+    font-weight: 800;
+    text-align: center;
+    color: $primary-yellow;
+  }
+
+  &__label {
+    font-size: 25px;
+    line-height: 32px;
+    font-weight: 200;
+    text-align: center;
+    color: $primary-yellow;
+  }
+
+  > svg path {
+    // transition: stroke-dashoffset 900ms cubic-bezier(.17,.67,.83,.67) 200ms!important;
+    transition: stroke-dashoffset 900ms ease-in 200ms!important;
+  }
+
+  @keyframes FadeInNumbers {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.charts-module {
+  display: flex;
+  min-height: 360px;
+  padding: 64px 0;
+  justify-content: space-between;
+}

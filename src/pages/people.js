@@ -40,8 +40,8 @@ const People = () => {
           <aside></aside>
           <Container>
             <div className="our-work-main-content">
-              <PageTitle text="meet the people" />
-              <PageSubtitle text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut turpis vitae lacus eleifend consectetur." />
+              <PageTitle text="meet the nerds 🤓" />
+              <PageSubtitle text=" a team of easy going nerdly digital millennials with rock solid experience (10 years) in digital business ventures " />
             </div>
           </Container>
           <OurPeople />

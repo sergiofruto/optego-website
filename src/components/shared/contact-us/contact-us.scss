@@ -32,7 +32,11 @@
       text-align: left;
       color: #000;
       outline: none;
-
+      &.full {
+        @include bp(desktop) {
+          flex: 0 0 100%;
+        }
+      }
       &.half {
         @include bp(desktop) {
           flex: 0 0 48%;

@@ -32,34 +32,31 @@ const AboutUs = () => {
                 <li className={classnames('what-we-do-card', 'animate__delay-1s', (isVisible && 'animate__animated animate__fadeInUp'))}>
                   <img className="what-we-do-card-image" src={`./../../../../about-us-wwd-1.png`} alt=""/>
                   <h2 className="what-we-do-card-title">
-                    we <br/>
-                    transform<br />
+                    power of<br />
                     data<br />
                   </h2>
                   <p className="what-we-do-card-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non euismod lectus. hendrerit velit sit amet ex accumsan tristique.
+                    We use data (duh!) but prefer real actionable insights.
                   </p>
                 </li>
                 <li className={classnames('what-we-do-card', 'animate__delay-1s', (isVisible && 'animate__animated animate__fadeInUp'))}>
                   <img className="what-we-do-card-image" src={`./../../../../about-us-wwd-2.png`} alt=""/>
                   <h2 className="what-we-do-card-title">
-                    the <br/>
-                    power of <br/>
-                    Social Media <br/>
+                    practical <br/>
+                    experience
                   </h2>
                   <p className="what-we-do-card-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non euismod lectus. hendrerit velit sit amet ex accumsan tristique.
+                    We have more than 15 years in the business, real world scenarios.
                   </p>
                 </li>
                 <li className={classnames('what-we-do-card', 'animate__delay-1s', (isVisible && 'animate__animated animate__fadeInUp'))}>
                   <img className="what-we-do-card-image" src={`./../../../../about-us-wwd-3.png`} alt=""/>
                   <h2 className="what-we-do-card-title">
-                    we <br/>
-                    transform<br />
-                    data<br />
+                    growth <br/>
+                    hacking
                   </h2>
                   <p className="what-we-do-card-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non euismod lectus. hendrerit velit sit amet ex accumsan tristique.
+                    A cool title for something that everybody knows, but not all seamlessly execute.
                   </p>
                 </li>
               </ul>

@@ -3,7 +3,8 @@
     align-items: flex-end;
     display: flex;
     width: 100%;
-    height: calc(100vh - 104px);
+    // height: calc(100vh - 104px);
+    height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,10 +12,10 @@
   }
 
   .container-campaign {
-    width: 90%;
-    margin: 0 auto;
     display: block;
-    margin-bottom: 64px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto 64px;
     @include bp(tablet) {
       max-width: 920px;
       margin-bottom: 80px;
@@ -84,3 +85,5 @@
     padding-top: 60px;
   }
 }
+
+@import "./../components/campaign/single-pie-chart/single-pie-chart.scss";
