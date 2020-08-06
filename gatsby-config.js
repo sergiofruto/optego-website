@@ -9,25 +9,34 @@ require("dotenv").config({
 })
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: 'Optego Website',
+    description: 'welcome to digital marketing services based on data knowledge and experience',
+  },
   plugins: [
     `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-source-prismic`,
+      resolve: 'gatsby-source-prismic-graphql',
       options: {
-        repositoryName: `optego`,
+        repositoryName: 'optego',
+        defaultLang: 'en-us', // optional, but recommended
         accessToken: `${process.env.API_KEY}`,
-        linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
-        schemas: {
-          homepage: require('./schemas/homepage.json'),
-        },
-      },
+        path: '/preview', // optional, default: /preview
+        previews: true, // optional, default: false
+        pages: [{ // optional
+          type: 'Case', // TypeName from prismic
+          match: '/:uid', // pages will be generated under this pattern
+          previewPath: '/preview', // optional path for unpublished documents
+          component: require.resolve('./src/templates/case.js'),
+          // sortBy: 'date_ASC', // optional, default: meta_lastPublicationDate_ASC; useful for pagination
+        }],
+      }
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Raleway\:300,500,800,800` // you can also specify font weights and styles
+          `Raleway\:400,500,600,700,800` // you can also specify font weights and styles
         ],
         display: 'swap'
       }

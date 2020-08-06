@@ -48,7 +48,20 @@
 
 .charts-module {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 360px;
-  padding: 64px 0;
+  padding: 32px 0;
   justify-content: space-between;
+  @include bp(tablet) {
+    flex-direction: row;
+    padding: 64px 0;
+  }
+
+  .pie-chart:not(:last-child) {
+    margin-bottom: 24px;
+    @include bp(tablet) {
+      margin-bottom: 0;
+    }
+  }
 }

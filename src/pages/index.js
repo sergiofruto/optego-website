@@ -1,6 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { graphql, Link } from "gatsby"
-
+import { graphql, Link } from "gatsby";
 import Header from '../components/shared/header/header';
 import Footer from '../components/shared/footer/footer';
 import Hero from './../components/homepage/hero/hero';
@@ -12,7 +11,7 @@ import LoadAnimation from './../../static/load-animation-final.svg';
 
 import "./../styles/core.scss";
 
-const Index = ({ data: { prismicHomepage } }) => {
+const Index = ({ data }) => {
   // const getFirstLoad = sessionStorage.getItem('visited') || false;
   // const [showAnimation, setShowAnimation] = useState(!getFirstLoad);
   // if (getFirstLoad) {
@@ -20,8 +19,7 @@ const Index = ({ data: { prismicHomepage } }) => {
   // } else {
   //   sessionStorage.setItem("visited", true);
   // };
-
-  const [showLoading, setShowLoading] = useState(false)
+  const [showLoading, setShowLoading] = useState(false);
   useEffect(
     () => {
       let timer1 = setTimeout(() => setShowLoading(true), 1500)
@@ -33,18 +31,28 @@ const Index = ({ data: { prismicHomepage } }) => {
     },
     [] //useEffect will run only one time
   )
-
+  console.log(data);
+  const prismicContent = data.prismic.allHomepages.edges[0];
+  if (!prismicContent) return null;
+  const document = prismicContent.node;
+  
   return(
     <Fragment>
       <Header homeAnimation/>
         <main className="page-top">
           <Hero
-            title={prismicHomepage.data.hero_title.text}
-            image={prismicHomepage.data.hero_image.url}
-            imageAlt={prismicHomepage.data.hero_image.alt}
+            title={document.hero_title}
+            image={document.hero_image.url}
+            imageAlt={document.hero_image.alt}
           />
-          <AboutUs />
-          <OurServices />
+          <AboutUs 
+            title={document.about_us_title}
+            blocks={document.about_us_block}
+          />
+          <OurServices
+            title={document.our_services_title}
+            blocks={document.our_services_block}
+          />
           <OurClients />
           <ContactUs home/>
         </main>
@@ -54,20 +62,30 @@ const Index = ({ data: { prismicHomepage } }) => {
   );
 }
 
-export default Index;
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    prismicHomepage {
-      data {
-        hero_title {
-          text
-        }
-        hero_image {
-          url
-          alt
+export const query = graphql`
+  query {
+    prismic {
+      allHomepages {
+        edges {
+          node {
+            hero_title
+            hero_image
+            about_us_title
+            about_us_block {
+              image
+              title
+              description
+            }
+            our_services_title
+            our_services_block {
+              icon
+              title
+              description
+            }
+          }
         }
       }
     }
   }
 `
+export default Index;

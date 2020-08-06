@@ -90,12 +90,16 @@
     }
   }
 
-  .square-animation{
+  .square-animation {
+    display: none;
     position: absolute;
     top: 300px;
     right: -220px;
     width: 400px;
     height: 400px;
     transform: rotate(265deg);
+    @include bp(tablet) {
+      display: block;
+    }
   }
 }

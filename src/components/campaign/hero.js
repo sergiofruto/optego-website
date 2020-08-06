@@ -1,13 +1,17 @@
 import React from 'react';
+import { RichText } from 'prismic-reactjs';
 
-const Hero = ({ image }) => {
+const Hero = ({ tagline, title, image, imageAlt }) => {
   return (
-    <section>
-      <div className="hero-wrapper animate__animated animate__fadeInUp" style={{ backgroundImage: `url(${image})`}}>
-        <div className="container-campaign">
-          <span className="hero-tagline animate__animated animate__fadeInUp">Coca Cola</span>
-          <h1 className="hero-title animate__animated animate__fadeInUp">Santa Claus <br/> Experience</h1>
-        </div>
+    <section className="campaign-hero">
+      <div className="campaign-hero__image blur-kenburns-top" style={{ backgroundImage: `url(${image})` }} />
+      <div className="campaign-hero__info">
+        <span className="hero-tagline focus-in-expand-delayed">
+          {RichText.asText(tagline)}
+        </span>
+        <h1 className="hero-title focus-in-expand-delayed">
+          {RichText.asText(title)}
+        </h1>
       </div>
     </section>
   );

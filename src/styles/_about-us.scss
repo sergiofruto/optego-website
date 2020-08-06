@@ -50,15 +50,29 @@
         }
       }
     }
+
+    .illustration {
+      max-width: 80%;
+      margin: 0 auto;
+      display: block;
+      @include bp(tablet) {
+        max-width: 100%;
+      }
+    }
   }
 
   .about-us-title {
     margin-bottom: 24px;
-    font-family: Raleway-SemiBold;
-    font-weight: normal;
-    font-size: 56px;
+    font-size: 32px;
     line-height: 1.2;
+    font-weight: 600;
     color: #000;
+    @include bp(tablet) {
+      font-size: 40px;
+    }
+    @include bp(desktop) {
+      font-size: 56px;
+    }
   }
 
   .about-us-description {
