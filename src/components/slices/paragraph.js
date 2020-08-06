@@ -5,8 +5,7 @@ import { linkResolver } from 'gatsby-source-prismic-graphql'
 const Paragraph = ({ slice }) => {
   return (
     <p>
-      {RichText.asText(slice.primary.text)}
-      {console.log(slice)}
+      {slice.primary.text[0].text}
     </p>
   )
 }

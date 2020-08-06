@@ -17,15 +17,15 @@ const Footer = () => {
         <div className="inner-footer">
           <ul className="offices-list">
             <li className="offices-list__item">
-              <img src="./icon-flag-usa@2x.png" alt="" className="offices-list__flag"/>
+              <img src={'/icon-flag-usa@2x.png'} alt="" className="offices-list__flag"/>
               University Drive 1130, Miami, Florida
             </li>
             <li className="offices-list__item">
-              <img src="./icon-flag-arg@2x.png" alt="" className="offices-list__flag" />
+              <img src={'/icon-flag-arg@2x.png'} alt="" className="offices-list__flag" />
               Av. Cnel Niceto Vega 5662, Buenos Aires
             </li>
             <li className="offices-list__item">
-              <img src="./icon-flag-rep@2x.png" alt="" className="offices-list__flag" />
+              <img src={'/icon-flag-rep@2x.png'} alt="" className="offices-list__flag" />
               Av. Abraham Lincoln 701 Santo Domingo
             </li>
           </ul>
