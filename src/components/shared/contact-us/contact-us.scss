@@ -32,6 +32,7 @@
       text-align: left;
       color: #000;
       outline: none;
+      background-color: $primary-bg-color;
       &.full {
         @include bp(desktop) {
           flex: 0 0 100%;
@@ -63,6 +64,7 @@
       line-height: 1.1;
       font-weight: 300;
       outline: none;
+      background-color: $primary-bg-color;
     }
   }
 

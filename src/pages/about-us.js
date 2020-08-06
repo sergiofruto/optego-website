@@ -40,7 +40,7 @@ const AboutUs = () => {
           <Container>
             <div className="our-work-main-content">
               <PageTitle text="about us" />
-              <PageSubtitle text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+              <PageSubtitle text="We are not only concerned with results, but also the customer and consumer experience." />
               <div className="about-us-sections">
                 <TextImageBlock
                   title='who?'

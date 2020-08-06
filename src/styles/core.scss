@@ -14,6 +14,7 @@ $primary-color: #333;
 $primary-yellow: #F8B617;
 $primary-red: #E61853;
 $primary-black: #1A1A1A;
+$primary-bg-color: #F4F4F4;
 
 //tipography
 $font-stack: 'Raleway', sans-serif;
@@ -32,6 +33,7 @@ body {
   font-family: $font-stack;
   font-size: 62.5%;
   color: $primary-color;
+  background-color: $primary-bg-color;
 }
 
 img {

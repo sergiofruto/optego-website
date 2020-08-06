@@ -4,6 +4,9 @@ import { Link } from "gatsby";
 import Container from "./../container/container";
 import Modal from "./../modal/modal";
 import WipeAnimationOut from "./../../../../static/menu-animation-final-2.svg";
+const Logo01 = './../../../logo-01.png';
+const Logo02 = './../../../logo-02.png';
+const Logo03 = './../../../logo-03.png';
 
 const Header = ({ homeAnimation }) => {
   const [isMenuOpening, setIsMenuOpening] = useState(false);
@@ -23,7 +26,11 @@ const Header = ({ homeAnimation }) => {
     <header className={classnames('header', (homeAnimation && 'animate__animated animate__fadeIn animate__delay-1s'))}>
       <Container>
         <Link to="/" className="header-logo">
-          <img src={`./../../../../optego-logo-color.png`} alt="Optego Logo"/>
+          <span className="animated-logo">
+            <img src={Logo01} alt="OPT" />
+            <img src={Logo02} alt="E" className="rotate-in-center" />
+            <img src={Logo03} alt="GO" />
+          </span>
         </Link>
         <button className="header-menu">
           <img 

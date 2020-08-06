@@ -81,32 +81,42 @@ const ourClients = [
   {
     name: 'name',
     description: '',
-    image: './client-logo-coca-cola.svg'
+    image: './brands/MARCAS-04.svg'
   },
   {
     name: 'name',
     description: '',
-    image: './client-logo-movistar.svg'
+    image: './brands/MARCAS-07.svg'
   },
   {
     name: 'name',
     description: '',
-    image: './client-logo-sams-club.svg'
+    image: './brands/MARCAS-11.svg'
   },
   {
     name: 'name',
     description: '',
-    image: './client-logo-quiksilver.svg'
+    image: './brands/MARCAS-08.svg'
   },
   {
     name: 'name',
     description: '',
-    image: './client-logo-coca-cola.svg'
+    image: './brands/MARCAS-10.svg'
   },
   {
     name: 'name',
     description: '',
-    image: './client-logo-movistar.svg'
+    image: './brands/MARCAS-15.svg'
+  },
+  {
+    name: 'name',
+    description: '',
+    image: './brands/MARCAS-14.svg'
+  },
+  {
+    name: 'name',
+    description: '',
+    image: './brands/MARCAS-21.svg'
   },
 ];
 
