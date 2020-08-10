@@ -12,13 +12,6 @@ import LoadAnimation from './../../static/load-animation-final.svg';
 import "./../styles/core.scss";
 
 const Index = ({ data }) => {
-  // const getFirstLoad = sessionStorage.getItem('visited') || false;
-  // const [showAnimation, setShowAnimation] = useState(!getFirstLoad);
-  // if (getFirstLoad) {
-  //   console.log('esta todo bien');
-  // } else {
-  //   sessionStorage.setItem("visited", true);
-  // };
   const [showLoading, setShowLoading] = useState(false);
   useEffect(
     () => {
@@ -31,7 +24,7 @@ const Index = ({ data }) => {
     },
     [] //useEffect will run only one time
   )
-  console.log(data);
+
   const prismicContent = data.prismic.allHomepages.edges[0];
   if (!prismicContent) return null;
   const document = prismicContent.node;
@@ -53,7 +46,9 @@ const Index = ({ data }) => {
             title={document.our_services_title}
             blocks={document.our_services_block}
           />
-          <OurClients />
+          <OurClients
+            clients={document.our_customers_module.body[0].fields}
+          />
           <ContactUs home/>
         </main>
       <Footer />
@@ -82,10 +77,28 @@ export const query = graphql`
               title
               description
             }
+            our_customers_title
+            our_customers_subtitle
+            our_customers_module {
+              ... on PRISMIC_Customers_list {
+                body {
+                  ... on PRISMIC_Customers_listBodyCustomer {
+                    type
+                    label
+                    fields {
+                      customer_description
+                      customer_logo
+                      customer_name
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
     }
   }
 `
+
 export default Index;

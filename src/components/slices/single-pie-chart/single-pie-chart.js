@@ -2,7 +2,7 @@ import React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 import { useCountUp } from 'react-countup';
 
-const SinglePieChart = ({ labelNumber, labelUnit, labelText }) => {
+const SinglePieChart = ({ labelPreNumber, labelNumber, labelUnit, labelText }) => {
   const number = parseInt(labelNumber, 10);
   const { countUp } = useCountUp({ end: number });
 
@@ -14,10 +14,8 @@ const SinglePieChart = ({ labelNumber, labelUnit, labelText }) => {
         lineWidth={10}
         animate
       />
-      <div class="pie-chart__center">
-        <span className="pie-chart__number">
-          {countUp}{labelUnit}
-        </span>
+      <div className="pie-chart__center">
+        <span className="pie-chart__number">{labelPreNumber}{countUp}{labelUnit}</span>
         <span className="pie-chart__label">{labelText}</span>
       </div>
     </div>

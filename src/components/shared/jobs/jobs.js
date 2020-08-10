@@ -21,25 +21,17 @@ const OurServices = () => {
             <div className="content">
               <SectionTitle text="jobs" isVisible={isVisible} />
               <SectionSubtitle
-                text=" we find the coolest people for our coolest positions. Join us in our digital adventures."
+                text="we find the coolest people for our coolest positions. Join us in our digital adventures."
                 isVisible={isVisible}
               />
               <ul className={classnames('jobs-grid', 'animate__animated', (isVisible && 'animate__fadeInUp'))}>
                 <li className="jobs-item">
-                    <h2>UI Developer</h2>
-                    <p>Buenos Aires, Argentina</p>
-                </li>
-                <li className="jobs-item">
-                    <h2>UI Developer</h2>
-                    <p>Buenos Aires, Argentina</p>
-                </li>
-                <li className="jobs-item">
-                    <h2>UI Developer</h2>
-                    <p>Buenos Aires, Argentina</p>
-                </li>
-                <li className="jobs-item">
-                    <h2>UI Developer</h2>
-                    <p>Buenos Aires, Argentina</p>
+                  <h2 className="jobs-item__title">UI Developer</h2>
+                  <p className="jobs-item__location">Buenos Aires, Argentina</p>
+                  <div className="jobs-item__description">
+                    <p>Job details goes here</p>
+                    <a href="mailto:someone@yoursite.com">Email Us</a>
+                  </div>
                 </li>
               </ul>
             </div>

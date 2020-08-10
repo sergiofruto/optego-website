@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import { RichText } from 'prismic-reactjs'
 import VisibilitySensor from 'react-visibility-sensor';
 import classnames from 'classnames';
 import Container from "./../../shared/container/container";
@@ -9,124 +10,12 @@ import ScrollLine from './../../shared/scroll-line/scroll-line';
 import Button from '../../shared/button/button';
 import LayeredAnimation from '../../shared/layered-animation/layered-animation';
 
-// const ourClients = [
-//   {
-//     name: 'name',
-//     description: '',
-//     image: 'https://optego.agency/wp-content/uploads/2020/01/uade.png'
-//   },
-//   {
-//     name: 'name',
-//     description: '',
-//     image: 'https://optego.agency/wp-content/uploads/2020/01/rodo.png'
-//   },
-//   {
-//     name: 'name',
-//     description: '',
-//     image: 'https://optego.agency/wp-content/uploads/2020/01/samsung.png'
-//   },
-//   {
-//     name: 'name',
-//     description: '',
-//     image: 'https://optego.agency/wp-content/uploads/2020/01/rip-curl.png'
-//   },
-//   {
-//     name: 'name',
-//     description: '',
-//     image: 'https://optego.agency/wp-content/uploads/2020/01/qm.png'
-//   },
-//   {
-//     name: 'name',
-//     description: '',
-//     image: 'https://optego.agency/wp-content/uploads/2020/01/mvl.png'
-//   },
-//   {
-//     name: 'name',
-//     description: '',
-//     image: 'https://optego.agency/wp-content/uploads/2020/01/mb.png'
-//   },
-//   {
-//     name: 'name',
-//     description: '',
-//     image: 'https://optego.agency/wp-content/uploads/2020/01/movistar.png'
-//   },
-//   {
-//     name: 'name',
-//     description: '',
-//     image: 'https://optego.agency/wp-content/uploads/2020/01/ean.png'
-//   },
-//   {
-//     name: 'name',
-//     description: '',
-//     image: 'https://optego.agency/wp-content/uploads/2020/01/ey.png'
-//   },
-//   {
-//     name: 'name',
-//     description: '',
-//     image: 'https://optego.agency/wp-content/uploads/2020/01/dow.png'
-//   },
-//   {
-//     name: 'name',
-//     description: '',
-//     image: 'https://optego.agency/wp-content/uploads/2020/01/coca-cola.png'
-//   },
-//   {
-//     name: 'name',
-//     description: '',
-//     image: 'https://optego.agency/wp-content/uploads/2020/01/agro.png'
-//   },
-// ];
-
-const ourClients = [
-  {
-    name: 'name',
-    description: '',
-    image: './brands/MARCAS-04.svg'
-  },
-  {
-    name: 'name',
-    description: '',
-    image: './brands/MARCAS-07.svg'
-  },
-  {
-    name: 'name',
-    description: '',
-    image: './brands/MARCAS-11.svg'
-  },
-  {
-    name: 'name',
-    description: '',
-    image: './brands/MARCAS-08.svg'
-  },
-  {
-    name: 'name',
-    description: '',
-    image: './brands/MARCAS-10.svg'
-  },
-  {
-    name: 'name',
-    description: '',
-    image: './brands/MARCAS-15.svg'
-  },
-  {
-    name: 'name',
-    description: '',
-    image: './brands/MARCAS-14.svg'
-  },
-  {
-    name: 'name',
-    description: '',
-    image: './brands/MARCAS-21.svg'
-  },
-];
-
-const OurServices = () => {
+const OurClients = ({ clients }) => {
   const [isVisible, setVisibility] = useState(false);
 
   const onChange = visiblity => {
     setVisibility(visiblity);
   };
-
   return (
     <section className="homepage-our-clients">
       <ScrollLine />
@@ -144,10 +33,14 @@ const OurServices = () => {
                 isVisible={isVisible}
               />
               <ul className={classnames('our-clients-grid', 'animate__animated', (isVisible && 'animate__fadeInUp'))}>
-                {ourClients.map((item) =>
+                {clients.map((item) =>
                   <li className="our-clients-item">
                     <a className="client-link" href="#">
-                      <img className="client-logo" src={item.image} alt={item.name} />
+                      <img 
+                        className="client-logo"
+                        src={item.customer_logo.url}
+                        alt={item.customer_logo.alt}
+                      />
                     </a>
                   </li>
                 )}
@@ -163,4 +56,4 @@ const OurServices = () => {
   );
 };
 
-export default OurServices;
+export default OurClients;

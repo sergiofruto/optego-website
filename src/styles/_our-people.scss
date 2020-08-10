@@ -10,54 +10,6 @@
     }
   }
 
-  .our-people-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 48px;
-    grid-gap: 64px;
-    @include bp(tablet) {
-      grid-template-columns: 1fr 1fr 1fr;
-      margin-top: 100px;
-    }
-
-    @include bp(desktop) {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      max-width: 1000px;
-      margin: 100px auto 0;
-    }
-
-    @for $i from 1 through 20 {
-      .our-people-item:nth-child(#{$i}) {
-        --animate-delay: #{$i * 0.25}s;
-      }
-    }
-  }
-  .our-people-item {
-    &__avatar {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      margin-bottom: 8px;
-    }
-
-    &__name {
-      margin-bottom: 8px;
-      font-weight: $font-bold;
-      font-size: 23px;
-      line-height: 23px;
-      text-align: left;
-      color: #000;
-      text-transform: lowercase;
-    }
-
-    &__role {
-      font-weight: $font-medium;
-      font-size: 17px;
-      text-align: left;
-      color: #000;
-    }
-  }
-
   .page-bg-illu-01 {
     position: fixed;
     top: 190px;

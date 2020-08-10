@@ -67,6 +67,7 @@
   &:focus {
     background-color: #C11445;
     transition: all .25s ease-in;
+    outline: none;
   }
 
   &.small {

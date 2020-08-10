@@ -72,7 +72,6 @@ const OurTech = () => {
 
   const iconGenerator = (name) => {
     const Icon = iconsComponents[name];
-    console.log(Icon);
     return <Icon />;
   }
 

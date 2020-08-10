@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import { graphql, Link } from "gatsby";
 import VisibilitySensor from 'react-visibility-sensor';
 import classnames from 'classnames';
 import Header from '../components/shared/header/header';
@@ -12,22 +13,35 @@ import ContactUs from './../components/shared/contact-us/contact-us';
 
 import "./../styles/core.scss";
 
-// import Image1 from "./../../static/about-us-illus-01.svg";
-// import Image2 from "./../../static/about-us-illus-02.svg";
-// import Image3 from "./../../static/about-us-illus-03.svg";
 import AnimatedCircle from './../../static/animated-dashed-circle.svg';
 
-const image1 = '../about-us-illus-01.svg'
-const image2 = '../about-us-illus-02.svg'
-const image3 = '../about-us-illus-03.svg'
-
-const AboutUs = () => {
+const AboutUs = ({ data }) => {
   const [isVisible, setVisibility] = useState(false);
 
   const onChange = visiblity => {
     setVisibility(visiblity);
   };
 
+  const prismicContent = data.prismic.allAbout_uss.edges[0];
+  if (!prismicContent) return null;
+  const document = prismicContent.node;
+  console.log(document);
+  const {
+    page_title,
+    page_subtitle,
+    who_title,
+    who_description,
+    who_image,
+    how_title,
+    how_description,
+    how_image,
+    for_who_title,
+    for_who_description,
+    for_who_image,
+    our_tech_title,
+    our_tech_description,
+    tech_list,
+  } = document;
   return (
     <Fragment>
       <Header />
@@ -39,37 +53,25 @@ const AboutUs = () => {
           <aside></aside>
           <Container>
             <div className="our-work-main-content">
-              <PageTitle text="about us" />
-              <PageSubtitle text="We are not only concerned with results, but also the customer and consumer experience." />
+              <PageTitle text={page_title} />
+              <PageSubtitle text={page_subtitle} />
               <div className="about-us-sections">
                 <TextImageBlock
-                  title='who?'
-                  description={`A team of 15 easy going
-                      nerdy digital millennials with
-                      rock solid experience (10 years)
-                      in <strong>digital business ventures.</strong>`}
-                  image={image1}
+                  title={who_title}
+                  description={who_description}
+                  image={who_image}
                   order='left'
                 />
                 <TextImageBlock
-                  title='how?'
-                  description={`Using a swissknife of tools
-                    <br />(yes we also code our own)<br />
-                    <strong>and methodologies to
-                    improve CRO </strong>(conversion
-                    rate optimization).`}
-                  image={image2}
+                  title={how_title}
+                  description={how_description}
+                  image={how_image}
                   order='right'
                 />
                 <TextImageBlock
-                  title='for who?'
-                  description={`We usually for for digital
-                    startups and ecommerce
-                    companies globally, but we
-                    are also working for the
-                    biggest beverage, the largest
-                    bank and the coolest app =)`}
-                  image={image3}
+                  title={for_who_title}
+                  description={for_who_description}
+                  image={for_who_image}
                   order='left'
                 />
                 <hr className="section-divider" />
@@ -84,5 +86,37 @@ const AboutUs = () => {
     </Fragment>
   );
 };
+
+export const query = graphql`
+  query {
+    prismic {
+      allAbout_uss {
+        edges {
+          node {
+            page_title
+            page_subtitle
+            tech_list {
+              description
+              icon
+              title
+            }
+            our_tech_title
+            our_tech_description
+            how_title
+            contact_us_form
+            for_who_description
+            for_who_image
+            for_who_title
+            how_description
+            how_image
+            who_description
+            who_image
+            who_title
+          }
+        }
+      }
+    }
+  }
+`
 
 export default AboutUs;

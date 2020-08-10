@@ -7,7 +7,7 @@ const Hero = ({ tagline, title, image, imageAlt }) => {
       <div className="campaign-hero__image blur-kenburns-top" style={{ backgroundImage: `url(${image})` }} />
       <div className="campaign-hero__info">
         <span className="hero-tagline focus-in-expand-delayed">
-          {title[0].text}
+          {tagline[0].text}
         </span>
         <h1 className="hero-title focus-in-expand-delayed">
           {title[0].text}

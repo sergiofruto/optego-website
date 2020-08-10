@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import { graphql, Link } from "gatsby";
 import VisibilitySensor from 'react-visibility-sensor';
 import classnames from 'classnames';
 import Header from '../components/shared/header/header';
@@ -13,12 +14,18 @@ import AnimatedCircle from './../../static/animated-dashed-circle.svg';
 
 import "./../styles/core.scss";
 
-export default function OurWork() {
+const OurWork = ({ data }) => {
   const [isVisible, setVisibility] = useState(false);
 
   const onChange = visiblity => {
     setVisibility(visiblity);
   };
+
+  const prismicContentWorks = data.prismic.allOur_works.edges[0];
+  const prismicContentCases = data.prismic.allCases;
+  if (!prismicContentWorks) return null;
+  const documentWorks = prismicContentWorks.node;
+  const documentCases = prismicContentCases.edges;
   return (
     <Fragment>
       <Header />
@@ -35,29 +42,17 @@ export default function OurWork() {
                   {<LayeredAnimation isVisible={isVisible} />}
                 </div>
               </VisibilitySensor>
-              <PageTitle text="our work" />
-              <PageSubtitle text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+              <PageTitle text={documentWorks.page_title} />
+              <PageSubtitle text={documentWorks.page_subtitle} />
               <div className="works-grid">
-                <WorkModule 
-                  title="Coca Cola"
-                  image="../works-1.png"
-                  link={'/'}
-                />
-                <WorkModule 
-                  title="Mauricio Macri"
-                  image="../works-macri.jpg"
-                  link={'/'}
-                />
-                <WorkModule 
-                  title="sams"
-                  image="../campaign-banner-small@2x.jpg"
-                  link={'/'}
-                />
-                <WorkModule 
-                  title="Movistar"
-                  image="../works-4.png"
-                  link={'/'}
-                />
+                {documentCases.map((work) =>
+                  <WorkModule
+                    title="Coca Cola"
+                    image="../works-1.png"
+                    link={'/'}
+                    work={work}
+                  />
+                )}
               </div>
             </div>
             <ContactUs />
@@ -68,3 +63,32 @@ export default function OurWork() {
     </Fragment>
   )
 }
+
+export const query = graphql`
+  query {
+    prismic {
+      allCases {
+        edges {
+          node {
+            brand_name
+            large_banner
+            title
+            _meta {
+              uid
+            }
+          }
+        }
+      }
+      allOur_works {
+        edges {
+          node {
+            page_subtitle
+            page_title
+          }
+        }
+      }
+    }
+  }
+`
+
+export default OurWork;

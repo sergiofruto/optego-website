@@ -1,131 +1,91 @@
-.our-tech-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-top: 48px;
-  grid-gap: 16px;
-  @include bp(tablet) {
-    grid-template-columns: 1fr 1fr 1fr;
-     margin-top: 64px;
-  }
-
-  @include bp(desktop) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-
-  @for $i from 1 through 20 {
-    .our-tech-item:nth-child(#{$i}) {
-      --animate-delay: #{$i * 0.25}s;
+.our-people-section {
+  .our-people-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 48px;
+    grid-gap: 64px;
+    @include bp(tablet) {
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 100px;
     }
-  }
 
-  .our-tech-item {
-    padding: 32px 24px;
-    height: 170px;
-    transition: all 300ms ease-out;
-    background-color: white;;
-    box-shadow: 0 0 20px #dedede;
-    overflow: hidden;
+    @include bp(desktop) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      max-width: 1000px;
+      margin: 100px auto 0;
+    }
 
-    &__icon-wrapper {
-      position: relative;
-      display: inline-flex;
-      height: 54px;
-      transition: height 300ms ease-out;
-
-      &:before {
-        content: '';
-        position: absolute;
-        top: -3px;
-        left: 50%;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: $primary-red;
-        opacity: .3;
-        z-index: -1;
-        transition: transform 300ms ease-in;
-        will-change: transform;
-      }
-
-      > svg {
-        height: 100%;
-        width: auto;
+    @for $i from 1 through 20 {
+      .our-people-item:nth-child(#{$i}) {
+        --animate-delay: #{$i * 0.25}s;
       }
     }
+  }
 
-    &__title {
+  .our-people-item {
+    &__card {
       position: relative;
-      z-index: 10;
-      transition: all 300ms ease-out;
-      margin-top: 16px;
-      font-family: Raleway-Bold;
-      font-weight: normal;
-      font-size: 22px;
-      line-height: 25px;
-      text-align: left;
-      color: #000;
-    }
+      width: 204px;
+      height: 204px;
+      margin-bottom: 16px;
+      transform-style: preserve-3d;
+      perspective: 1000px;
 
-    &__description {
-      position: absolute;
-      margin-top: 12px;
-      max-width: calc(100% - 40px);
-      transform: translateY(130px);
-      transition: all 350ms ease-out;
-      font-family: Raleway-Medium;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 20px;
-      text-align: left;
-      color: #000;
-      opacity: 0;
-    }
-
-    &:hover {
-      padding: 20px 16px;
-      transition: all 300ms ease-in;
-      .our-tech-item__icon-wrapper {
-        height: 24px;
-        transition: height 300ms ease-in;
-        &:before {
-          transform: scale(6.8);
-          transform-origin: center;
-          transition: transform 300ms ease-in;
+      &:hover {
+        .our-people-item__inner {
+          transform: rotateY(180deg);
         }
       }
-
-      .our-tech-item__title {
-        margin-left: 32px;
-        margin-top: -26px;
-        transition: margin 300ms ease-in;
-      }
-
-      .our-tech-item__description {
-        animation: introText 300ms ease-in forwards;
-        transition: all 350ms ease-in;
-      }
     }
-  }
-}
+    &__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 400ms;
+      transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+      transform-style: preserve-3d;
+    }
+    &__front-face,
+    &__back-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    &__back-face {
+      padding: 16px;
+      border-radius: 50%;
+      background-color: #FAD1DD;
+      transform: rotateY(180deg);
+      color: white;
+    }
+    &__avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
 
-@keyframes introText {
-  0% {
-    opacity: 0;
-    transform: translateY(130px);
-  }
+    &__name {
+      margin-bottom: 8px;
+      font-weight: $font-bold;
+      font-size: 23px;
+      line-height: 23px;
+      text-align: center;
+      color: #000;
+      text-transform: lowercase;
+    }
 
-  50% {
-    opacity: 0;
-    transform: translateY(65px);
-  }
-
-  75% {
-    opacity: 0;
-    transform: translateY(32.5px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+    &__role {
+      font-weight: $font-medium;
+      font-size: 16px;
+      line-height: 1.2;
+      text-align: center;
+      color: #000;
+    }
   }
 }

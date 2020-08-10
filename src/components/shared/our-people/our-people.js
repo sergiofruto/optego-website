@@ -44,9 +44,17 @@ const OurPeople = () => {
             <ul className="our-people-grid animate__animated animate__fadeInUp">
               {ourPeopleList.map((item) =>
                 <li className={classnames('our-people-item', 'animate__animated animate__delay-1s', (isVisible && 'animate__fadeInUp'))}>
-                  <img src={item.photo} alt={item.title} className="our-people-item__avatar"/>
+                  <div className="our-people-item__card">
+                    <div className="our-people-item__inner">
+                      <div className="our-people-item__front-face">
+                        <img src={item.photo} alt={item.title} className="our-people-item__avatar"/>
+                      </div>
+                      <div className="our-people-item__back-face">
+                        <p className="our-people-item__role">{item.desc}</p>
+                      </div>
+                    </div>
+                  </div>
                   <h2 className="our-people-item__name">{item.title}</h2>
-                  <p className="our-people-item__role">{item.desc}</p>
                 </li>
               )}
             </ul>

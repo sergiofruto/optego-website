@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.0",
+    "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "gatsby": "^2.22.15",
     "gatsby-plugin-google-fonts": "^1.0.1",
