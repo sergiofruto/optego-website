@@ -31,8 +31,8 @@ const People = () => {
           <aside></aside>
           <Container>
             <div className="our-work-main-content">
-              <PageTitle text="meet the nerds 🤓" />
-              <PageSubtitle text=" a team of easy going nerdly digital millennials with rock solid experience (10 years) in digital business ventures " />
+              <h1 class="page-title animate__animated animate__fadeInUp">meet the nerds 🤓</h1>
+              <p class="page-subtitle animate__animated animate__fadeInUp">a team of easy going nerdly digital millennials with rock solid experience (10 years) in digital business ventures</p>
             </div>
           </Container>
           <OurPeople />

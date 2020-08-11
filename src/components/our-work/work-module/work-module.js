@@ -14,7 +14,6 @@ const WorkModule = ({work, title, image, link}) => {
   if (work.node.large_banner) {
     img = work.node.large_banner.url;
   }
-  console.log(work);
   return (
     <article>
       <VisibilitySensor onChange={onChange} partialVisibility active={!isVisible} offset={{ top: -30 }}>

@@ -25,7 +25,6 @@ const AboutUs = ({ data }) => {
   const prismicContent = data.prismic.allAbout_uss.edges[0];
   if (!prismicContent) return null;
   const document = prismicContent.node;
-  console.log(document);
   const {
     page_title,
     page_subtitle,

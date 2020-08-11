@@ -33,6 +33,30 @@ const OurServices = () => {
                     <a href="mailto:someone@yoursite.com">Email Us</a>
                   </div>
                 </li>
+                <li className="jobs-item">
+                  <h2 className="jobs-item__title">UX Designer</h2>
+                  <p className="jobs-item__location">Buenos Aires, Argentina</p>
+                  <div className="jobs-item__description">
+                    <p>Job details goes here</p>
+                    <a href="mailto:someone@yoursite.com">Email Us</a>
+                  </div>
+                </li>
+                <li className="jobs-item">
+                  <h2 className="jobs-item__title">iOS Developer</h2>
+                  <p className="jobs-item__location">Buenos Aires, Argentina</p>
+                  <div className="jobs-item__description">
+                    <p>Job details goes here</p>
+                    <a href="mailto:someone@yoursite.com">Email Us</a>
+                  </div>
+                </li>
+                <li className="jobs-item">
+                  <h2 className="jobs-item__title">Producer</h2>
+                  <p className="jobs-item__location">Buenos Aires, Argentina</p>
+                  <div className="jobs-item__description">
+                    <p>Job details goes here</p>
+                    <a href="mailto:someone@yoursite.com">Email Us</a>
+                  </div>
+                </li>
               </ul>
             </div>
           </Container>
