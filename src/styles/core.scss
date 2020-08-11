@@ -55,6 +55,10 @@ p strong {
   color: $primary-yellow;
 }
 
+p b {
+  font-weight: $font-bold;
+}
+
 //common
 @import "./../components/shared/header/header.scss";
 @import "./../components/shared/modal/modal.scss";

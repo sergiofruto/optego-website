@@ -38,27 +38,30 @@
   }
 
   .bg-shape-animation {
-    position: absolute;
-    height: 580px;
-    width: 580px;
-    top: -10%;
-    right: -230px;
-    z-index: 0;
-
-    .shape {
-      display: flex;
-      will-change: border-radius;
-      animation: morph 8s ease-in-out forwards;
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    display: none;
+    @include bp(tablet) {
+      display: block;
+      position: absolute;
       height: 580px;
       width: 580px;
-      z-index: 5;
-      transition: all 1s ease-in-out;
-      border: 2px solid #49CED9;
-      // --primary: #88D5BF;
-	    // --secondary: #5D6BF8;
-      // background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
-    }
+      top: -10%;
+      right: -230px;
+      z-index: 0;
+
+      .shape {
+        display: flex;
+        will-change: border-radius;
+        animation: morph 8s ease-in-out forwards;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        height: 580px;
+        width: 580px;
+        z-index: 5;
+        transition: all 1s ease-in-out;
+        border: 2px solid #49CED9;
+        // --primary: #88D5BF;
+        // --secondary: #5D6BF8;
+        // background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+      }
 
       @keyframes morph {
         0% {
@@ -74,13 +77,19 @@
         } 
       }
     }
+  }
 
   .modal-content {
     position: relative;
-    align-items: center;
+    align-items: baseline;
     display: flex;
     width: 100%;
     z-index: 100;
+    padding-top: 120px;
+    @include bp(tablet) {
+      align-items: center;
+      padding-top: 0;
+    }
   }
 
   .container {
@@ -140,7 +149,7 @@
       display: inline-block;
       padding-bottom: 8px;
       font-weight: 900;
-      font-size: 16px;
+      font-size: 32px;
       line-height: 1.2;
       text-align: left;
       text-decoration: none;

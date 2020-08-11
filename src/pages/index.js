@@ -48,6 +48,7 @@ const Index = ({ data }) => {
           />
           <OurClients
             clients={document.our_customers_module.body[0].fields}
+            animation
           />
           <ContactUs home/>
         </main>

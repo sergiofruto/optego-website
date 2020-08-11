@@ -28,6 +28,24 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 32px;
+    @media (max-width: 767px) {
+      &:nth-child(2) {
+        .left-panel {
+          order: 2;
+          img {
+            max-width: 100%;
+          }
+        }
+        .right-panel {
+          order: 1;
+        }
+      }
+
+      .illustration {
+        padding-top: 32px;
+        padding-bottom: 40px;
+      }
+    }
     @include bp(tablet) {
       margin-bottom: 64px;
       flex-direction: row;

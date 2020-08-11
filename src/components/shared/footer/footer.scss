@@ -36,12 +36,15 @@
       display: flex;
       align-items: center;
       font-weight: normal;
-      font-size: 16px;
+      font-size: 12px;
       line-height: 1.2;
       font-weight: 400;
       text-align: left;
       color: #fff;
       text-decoration: none;
+      @include bp(tablet) {
+        font-size: 16px;
+      }
     }
 
     &__flag {

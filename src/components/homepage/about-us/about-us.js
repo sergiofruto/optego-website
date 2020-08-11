@@ -13,7 +13,7 @@ const bgIllusStyles1 = {
   backgroundImage: 'url(' + BgIllus01 + ')',
 }
 
-const AboutUs = ({title, blocks}) => {
+const AboutUs = ({ title, blocks }) => {
   const strTitle = RichText.asText(title);
   const [isVisible, setVisibility] = useState(false);
 

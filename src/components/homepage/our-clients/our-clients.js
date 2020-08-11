@@ -10,7 +10,7 @@ import ScrollLine from './../../shared/scroll-line/scroll-line';
 import Button from '../../shared/button/button';
 import LayeredAnimation from '../../shared/layered-animation/layered-animation';
 
-const OurClients = ({ clients }) => {
+const OurClients = ({ clients, noLine }) => {
   const [isVisible, setVisibility] = useState(false);
 
   const onChange = visiblity => {
@@ -18,14 +18,14 @@ const OurClients = ({ clients }) => {
   };
   return (
     <section className="homepage-our-clients">
-      <ScrollLine />
+      {noLine ? '' : <ScrollLine />}
       <VisibilitySensor onChange={onChange} partialVisibility active={!isVisible} offset={{ top: -30 }}>
         <Fragment>
           <div className="square-animation">
             {<LayeredAnimation isVisible={isVisible} />}
           </div>
           <Container>
-            <AsideMark number="04" tag="our clients" />
+            {noLine ? '' : <AsideMark number="04" tag="our clients" />}
             <div className="content">
               <SectionTitle text="our clients" isVisible={isVisible} />
               <SectionSubtitle

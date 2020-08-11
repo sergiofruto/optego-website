@@ -82,14 +82,17 @@
       }
     }
 
-    a {
+    &__link {
       display: block;
       height: 100%;
       padding: 48px 32px;
       text-decoration: none;
       background-color: $primary-bg-color;
       transition: all .4s ease-in;
-
+      border-bottom: 1px solid #424242;
+      @include bp(desktop) {
+        border-bottom: 0;
+      }
       &:hover {
         background-color: #FCE2D3;
       }

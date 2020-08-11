@@ -31,13 +31,13 @@ const Modal = ({ handleMenuToggle }) => {
                 <Link to="/about-us">About us</Link>
               </li>
               <li className="nav-list-item animate__animated animate__fadeInRight animate__delay-1s">
-                <Link to="/our-work">Work</Link>
+                <Link to="/our-work">Our Work</Link>
               </li>
               <li className="nav-list-item animate__animated animate__fadeInRight animate__delay-1s">
                 <Link to="/people">Our People</Link>
               </li>
               <li className="nav-list-item animate__animated animate__fadeInRight animate__delay-1s">
-                <Link to="/">Our Clients</Link>
+                <Link to="/our-clients">Our Clients</Link>
               </li>
             </ul>
           </nav>

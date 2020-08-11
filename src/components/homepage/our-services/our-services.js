@@ -35,7 +35,7 @@ const OurServices = () => {
             <div className={classnames('our-services-slider', 'animate__animated', (isVisible && 'animate__fadeInUp'))}>
               <ul className="our-services-grid">
                 <li className="our-services-item">
-                  <a href="#">
+                  <a className="our-services-item__link" href="#">
                     <div className="icon-wrapper">
                       <Icon1 className="icon" />
                     </div>
@@ -47,7 +47,7 @@ const OurServices = () => {
                   </a>
                 </li>
                 <li className="our-services-item">
-                  <a href="#">
+                  <a className="our-services-item__link" href="#">
                     <div className="icon-wrapper">
                       <Icon2 className="icon" />
                     </div>
@@ -59,7 +59,7 @@ const OurServices = () => {
                   </a>
                 </li>
                 <li className="our-services-item">
-                  <a href="#">
+                  <a className="our-services-item__link" href="#">
                     <div className="icon-wrapper">
                       <Icon3 className="icon" />
                     </div>
@@ -73,7 +73,7 @@ const OurServices = () => {
               </ul>
             </div>
             <div className="button-row">
-              <Button text="view our tech" link="#" arrow />
+              <Button text="view our tech" link="/about-us" arrow />
             </div>
           </Container>
         </Fragment>

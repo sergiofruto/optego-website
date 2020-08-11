@@ -34,15 +34,18 @@
 
 .homepage-hero {
   .scroll-line-animate {
-    position: absolute;
-    top: 50%;
-    left: 60px;
-    width: 1px;
-    height: 50%;
-    .scroll-line {
-      top: 0;
-      left: 0;
-      animation: drawLine .75s cubic-bezier(.17,.67,.83,.67) 2s forwards;
+    display: none;
+      @include bp(tablet) {
+      position: absolute;
+      top: 50%;
+      left: 60px;
+      width: 1px;
+      height: 50%;
+      .scroll-line {
+        top: 0;
+        left: 0;
+        animation: drawLine .75s cubic-bezier(.17,.67,.83,.67) 2s forwards;
+      }
     }
   }
 }

@@ -24,10 +24,12 @@
 }
 
 .our-work-main-content {
-  margin-top: 80px;
+  margin-top: 40px;
   position: relative;
   z-index: 100;
-
+  @include bp(tablet) {
+    margin-top: 80px;
+  }
   .works-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -40,12 +42,18 @@
     position: relative;
     display: flex;
     align-items: flex-end;
-    height: 354px;
-    width: 950px;
+    height: 400px;
     margin: 0 auto;
     overflow: hidden;
     cursor: pointer;
-
+    @include bp(tablet) {
+      width: 600px;
+      height: 200px;
+    }
+    @include bp(desktop) {
+      width: 950px;
+      height: 354px;
+    }
     img {
       position: absolute;
       display: block;
@@ -74,10 +82,13 @@
   .work-title {
     margin-bottom: 16px;
     font-weight: $font-extra-bold;
-    font-size: 68px;
+    font-size: 32px;
     line-height: 1.1;
     text-align: left;
     color: #fff;
     z-index: 10;
+    @include bp(tablet) {
+      font-size: 68px;
+    }
   }
 }

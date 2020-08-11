@@ -76,7 +76,7 @@ const OurTech = () => {
   }
 
   return (
-    <section>
+    <section id="our-tech">
       <VisibilitySensor onChange={onChange} partialVisibility active={!isVisible}>
         <Fragment>
           <Container>
